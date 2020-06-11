@@ -2,35 +2,92 @@
 .slick-slide.slick-current{}
 .slick-slide.slick-center{}
 
-.slick-dots{
-	position: absolute;
-	left: 0;
-	top: 0;
+.main-slider .slick-dots{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	z-index: 10;
+	bottom: 50px;
+	margin: 0px 0px 10px 0px;
+
+	@media (max-width: 480px) {
+		bottom: 30px;
+	}
 }
 
-.slick-dots li:not(:last-child){
-	margin: 0px 0px 19px 0px;
+.main-slider .slick-dots li:not(:last-child){
+	margin: 0px 10px 0px 0px;
 }
 	
-.slick-dots li.slick-active button{
-	background-color: #5a7797;
+.main-slider .slick-dots li.slick-active button{
+	background-color: transparent;
 }
 	
-.slick-dots button{
-	width: 10px;
-	height: 10px;
-	border: 1px solid #5a7797;
+.main-slider .slick-dots button{
+	width: 16px;
+	height: 16px;
+	border: 3px solid #eaeaea;
+	border-radius: 50%;
 	outline: none;
 	font-size: 0;
-	background-color: transparent;
+	background-color: #eaeaea;
 	padding: 0;
 }
 
 /* Стрелка */
-.slick-arrow{}
+.slick-arrow{
+	position: absolute;
+	padding: 0;
+	font-size: 0;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: transparent;
+	color: transparent;
+	z-index: 1;
+}
+
+.main-slider .slick-arrow {
+	width: 50px;
+	height: 50px;
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 50%;
+	top: 50%;
+}
 /* Стрелка влево */
-.slick-arrow.slick-prev{}
+.main-slider .slick-arrow.slick-prev{
+	left: 30px;
+	
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		border: solid #fff;
+		border-width: 0 3px 3px 0;
+		display: inline-block;
+		padding: 5px;
+		transform: translate(-50%, -50%) rotate(135deg);
+	}
+}
 /* Стрелка вправо */
-.slick-arrow.slick-next{}
-/* Стрелка не активная */
-.slick-arrow.slick-disabled{}
+.main-slider .slick-arrow.slick-next{
+	right: 40px;
+
+	&::after {
+		content: "";
+		top: 50%;
+		left: 50%;
+		position: absolute;
+		border: solid #fff;
+		border-width: 0 3px 3px 0;
+		display: inline-block;
+		padding: 5px;
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
+}
+
+.main-slider .slick-prev:hover, 
+.main-slider .slick-next:hover {
+	background-color: #da4b4b;
+}

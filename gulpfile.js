@@ -123,21 +123,9 @@ function images() {
 }
 
 function fonts() {
-	src(path.src.fonts)
-		.pipe(ttf2woff())
-		.pipe(dest(path.build.fonts))
 	return src(path.src.fonts)
-		.pipe(ttf2woff2())
 		.pipe(dest(path.build.fonts))
 };
-
-gulp.task('otf2ttf', function () {
-	return src([source_folder + '/fonts/*.otf'])
-		.pipe(fonter({
-			formats: ['ttf']
-		}))
-		.pipe(dest(source_folder + '/fonts/'));
-})
 
 gulp.task('svgSprite', function() {
 	return gulp.src([source_folder + '/img/iconsprite/*.svg'])
@@ -164,10 +152,9 @@ function clean(params) {
 	return del(path.clean)
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, fontsStyle));
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
-exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
 exports.images = images;
 exports.js = js;

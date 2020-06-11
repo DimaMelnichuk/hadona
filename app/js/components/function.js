@@ -1,10 +1,17 @@
 $(function(){
 
-   /***************** Menu-btn ********************/
-   $(".menu__burger").click(function(event){
-		$(".menu__burger,.menu").toggleClass("active");
-		$("body").toggleClass("lock");
-	});
+		$('.main-slider').slick({
+			arrows: true,
+			dots: true,
+			responsive: [
+				{
+				  breakpoint: 769,
+				  settings: {
+					arrows: false,
+				  }
+				}
+			 ]
+		});
  
 });
 
