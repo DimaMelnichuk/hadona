@@ -1,0 +1,66 @@
+.cart {
+	position: relative;
+	z-index: 3;
+	display: flex;
+	align-items: center;
+
+	// .cart__setting
+
+	&__setting {
+		position: relative;
+		padding: 20px;
+		cursor: pointer;
+
+		&::after {
+			position: absolute;
+			display: block;
+			content: "";
+			background-color: #ffffff;
+			opacity: 0.1;
+			height: 100%;
+			width: 1px;
+			right: 0;
+			top: 0;
+		}
+
+		span {
+			color: #888888;
+			font-size: 13px;
+			font-weight: 400;
+		}
+	}
+
+	// .cart__wallet
+
+	&__wallet {
+		padding: 20px;
+		cursor: pointer;
+		display: flex;
+	}
+
+	&__wallet-icon {
+		margin: 0px 8px 0px 0px;
+	}
+
+	// .cart__wallet-price
+
+	&__wallet-price {
+		color: #888888;
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 20px;
+		
+	}
+
+	// .cart__wallet-sum
+
+	&__wallet-sum {
+		color: #e12020;
+	}
+
+	// .cart__wallet-total
+
+	&__wallet-total {
+		color: #e12020;
+	}
+}

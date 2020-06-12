@@ -13,12 +13,16 @@
 // Blocks
 @import "blocks/header";
 @import "blocks/main-slider";
+@import "blocks/information";
+@import "blocks/featured";
 @import "blocks/footer";
 
 // Components
 @import "components/menu";
 @import "components/cart";
+/* @import "components/basket"; */
 @import "components/slider";
+@import "components/main-title";
 
 /* ==========================================================================
   General Styles
@@ -72,4 +76,8 @@ body.lock {
 .page {
 	background-color: #f5f5f5;
 	flex: 1 1 auto;
+}
+
+.btn {
+	display: inline-block;
 }

@@ -1,0 +1,33 @@
+.featured {
+	padding: 80px 0px;
+	
+	// .featured__main-title
+
+	&__main-title {
+	}
+
+	// .featured__slider
+
+	&__slider {
+	}
+
+	// .featured__slider-item
+
+	&__slider-item {
+	}
+
+	&__row {
+		display: flex;
+		margin: 0px -15px;
+	}
+
+	&__column {
+		flex: 0 1 16.666%;
+		padding: 0px 15px;
+	}
+
+	// .featured__cart
+
+	&__cart {
+	}
+}
