@@ -8,26 +8,17 @@
 
 	// .featured__slider
 
-	&__slider {
-	}
+	&__slider{
+	} 
 
 	// .featured__slider-item
 
-	&__slider-item {
+	&__slider-item{
+		padding-right: 30px;
 	}
-
-	&__row {
-		display: flex;
-		margin: 0px -15px;
-	}
-
-	&__column {
-		flex: 0 1 16.666%;
-		padding: 0px 15px;
-	}
-
 	// .featured__cart
 
 	&__cart {
+
 	}
 }

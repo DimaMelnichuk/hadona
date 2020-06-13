@@ -1,7 +1,49 @@
+/* ==========================================================================
+  General Styles
+========================================================================== */
 .slick-slide.slick-active{}
 .slick-slide.slick-current{}
 .slick-slide.slick-center{}
 
+/* Стрелка */
+.slick-arrow{
+	position: absolute;
+	padding: 0;
+	font-size: 0;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: transparent;
+	color: transparent;
+	z-index: 1;
+
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	background-color: rgba(0, 0, 0, 0.1);
+	background-color: #f3f3f3;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.slick-prev:before, 
+.slick-next:before {
+	font-family: "fontello";
+	font-size: 20px;
+	color: #fff;
+}
+
+.slick-next:before {
+	content: '\e808';
+}
+
+.slick-prev:before {
+	content: '\e807';
+}
+
+/* ==========================================================================
+  main-slider
+========================================================================== */
 .main-slider .slick-dots{
 	position: relative;
 	display: flex;
@@ -34,19 +76,6 @@
 	padding: 0;
 }
 
-/* Стрелка */
-.slick-arrow{
-	position: absolute;
-	padding: 0;
-	font-size: 0;
-	cursor: pointer;
-	border: none;
-	outline: none;
-	background: transparent;
-	color: transparent;
-	z-index: 1;
-}
-
 .main-slider .slick-arrow {
 	width: 50px;
 	height: 50px;
@@ -57,37 +86,31 @@
 /* Стрелка влево */
 .main-slider .slick-arrow.slick-prev{
 	left: 30px;
-	
-	&::after {
-		content: "";
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		border: solid #fff;
-		border-width: 0 3px 3px 0;
-		display: inline-block;
-		padding: 5px;
-		transform: translate(-50%, -50%) rotate(135deg);
-	}
 }
 /* Стрелка вправо */
 .main-slider .slick-arrow.slick-next{
 	right: 40px;
-
-	&::after {
-		content: "";
-		top: 50%;
-		left: 50%;
-		position: absolute;
-		border: solid #fff;
-		border-width: 0 3px 3px 0;
-		display: inline-block;
-		padding: 5px;
-		transform: translate(-50%, -50%) rotate(-45deg);
-	}
 }
 
 .main-slider .slick-prev:hover, 
 .main-slider .slick-next:hover {
 	background-color: #da4b4b;
 }
+
+/* ==========================================================================
+  featured__slider
+========================================================================== */
+.featured__slider .slick-prev{
+	left: 10px;
+}
+
+.featured__slider .slick-next{
+	right: 10px;
+}
+
+.featured__slider .slick-prev:hover:before, 
+.featured__slider .slick-next:hover:before {
+	color: #da4b4b;
+}
+ 
+

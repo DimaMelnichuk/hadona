@@ -1,19 +1,76 @@
 $(function(){
 
-		$('.main-slider').slick({
-			arrows: true,
-			dots: true,
-			responsive: [
-				{
-				  breakpoint: 769,
-				  settings: {
-					arrows: false,
-				  }
+	$('.main-slider').slick({
+		arrows: true,
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 769,
+				settings: {
+				arrows: false,
 				}
-			 ]
-		});
+			}
+			]
+	});
+
+	$('.featured__slider').slick({
+		slidesToShow: 6,
+		slidesToScroll: 1,
+		arrows: true,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 5,
+				}
+			},
+			{
+				breakpoint: 1100,
+				settings: {
+					slidesToShow: 4,
+				}
+			},
+			{
+				breakpoint: 900,
+				settings: {
+					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 769,
+				settings: {
+					slidesToShow: 3,
+					arrows: false,
+				}
+			},
+			{
+				breakpoint: 700,
+				settings: {
+					slidesToShow: 2,
+					arrows: false,
+				}
+			},
+			{
+				breakpoint: 500,
+				settings: {
+					slidesToShow: 1,
+					arrows: false,
+				}
+			},
+			]
+	});
+
+
+   $(".cart__body-shuffle").click(function(event){
+		$(this).toggleClass("active");
+	});
+
+   $(".cart__body-like").click(function(event){
+		$(this).toggleClass("active");
+	});
  
 });
+
 
 
 /***************** Menu-btn ********************/
@@ -23,8 +80,6 @@ menu_burger.addEventListener("click", function (e) {
 	menu.classList.toggle('active');
 	menu_burger.classList.toggle('active');
 });
-
-
 
 /***************** WebP ********************/
 function testWebP(callback) {
