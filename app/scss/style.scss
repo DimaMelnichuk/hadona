@@ -16,6 +16,11 @@
 @import "blocks/information";
 @import "blocks/featured";
 @import "blocks/policy";
+@import "blocks/special-product";
+@import "blocks/testimonials";
+@import "blocks/banner";
+@import "blocks/news";
+@import "blocks/newsletter";
 @import "blocks/footer";
 
 // Components
@@ -81,4 +86,10 @@ body.lock {
 
 .btn {
 	display: inline-block;
+}
+
+.webp .special-product__image {
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
 }

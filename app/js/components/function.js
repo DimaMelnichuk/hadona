@@ -60,6 +60,47 @@ $(function(){
 			]
 	});
 
+	$('.testimonials__slider').slick({
+		arrows: false,
+		dots: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 1100,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 769,
+				settings: {
+					slidesToShow: 1,
+				}
+			}
+			]
+	});
+
+	$('.news__slider').slick({
+		arrows: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 1100,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 700,
+				settings: {
+					slidesToShow: 1,
+				}
+			}
+			]
+	});
+
 
    $(".cart__body-shuffle").click(function(event){
 		$(this).toggleClass("active");
@@ -67,6 +108,14 @@ $(function(){
 
    $(".cart__body-like").click(function(event){
 		$(this).toggleClass("active");
+	});
+
+/***************** Name ********************/
+	$('.special-product__colors-color').click(function(){
+	$(".special-product__colors-color").removeClass("active");
+	$(this).addClass("active");
+	$("body").css("background",$(this).attr("data-color"));
+	$(".special-product__image").css("background-image",$(this).attr("data-pic"));
 	});
  
 });

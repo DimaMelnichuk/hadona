@@ -143,18 +143,24 @@
 
 	// .cart__body-descr
 
-	&__body-descr {
+	&__body-title {
+		display: inline-block;
 		color: #888888;
 		font-weight: 400;
 		font-size: 16px;
 		line-height: 22px;
 		text-transform: uppercase;
 		margin: 0px 0px 23px 0px;
+		transition: color .3s;
 
 		@media (max-width: 1366px) {
 			margin: 0px 0px 15px 0px;
 			font-size: 14px;
 			line-height: 20px;
+		}
+
+		&:hover {
+			color: #e12020;
 		}
 	}
 
