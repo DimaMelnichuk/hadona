@@ -20,8 +20,7 @@
 	border-radius: 50%;
 	width: 50px;
 	height: 50px;
-	background-color: rgba(0, 0, 0, 0.1);
-	background-color: #f3f3f3;
+	background-color: rgba(0, 0, 0, .3);
 	top: 50%;
 	transform: translateY(-50%);
 }
@@ -40,7 +39,10 @@
 .slick-prev:before {
 	content: '\e807';
 }
-
+.slick-prev:hover, 
+.slick-next:hover {
+	background-color: #da4b4b;
+}
 /* ==========================================================================
   main-slider
 ========================================================================== */
@@ -76,13 +78,6 @@
 	padding: 0;
 }
 
-.main-slider .slick-arrow {
-	width: 50px;
-	height: 50px;
-	background-color: rgba(0, 0, 0, 0.4);
-	border-radius: 50%;
-	top: 50%;
-}
 /* Стрелка влево */
 .main-slider .slick-arrow.slick-prev{
 	left: 30px;
@@ -91,12 +86,6 @@
 .main-slider .slick-arrow.slick-next{
 	right: 40px;
 }
-
-.main-slider .slick-prev:hover, 
-.main-slider .slick-next:hover {
-	background-color: #da4b4b;
-}
-
 /* ==========================================================================
   featured__slider
 ========================================================================== */
@@ -107,12 +96,6 @@
 .featured__slider .slick-next{
 	right: 10px;
 }
-
-.featured__slider .slick-prev:hover:before, 
-.featured__slider .slick-next:hover:before {
-	color: #da4b4b;
-}
- 
 /* ==========================================================================
   testimonials__slider
 ========================================================================== */
@@ -142,7 +125,6 @@
 	font-size: 0;
 	padding: 0;
 }
-
 
 .news__slider .slick-arrow {
 	top: 33%;

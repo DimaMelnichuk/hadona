@@ -1,12 +1,19 @@
 .main-slider {
-	padding: 90px 0px 0px 0px;
+	position: relative;
+	top: 90px;
+	margin-bottom: 60px;
+
+	@media (max-width: 480px) {
+		top: 75px;
+		margin-bottom: 40px;
+	}
 
 	// .main-slider__image
 
 	&__image {
 		position: relative;
 		padding: 0px 0px 19% 0px;
-		overflow: hidden;	
+		overflow: hidden;
 		background-color: rgba(0, 0, 0, 0.1);
 
 		@media (max-width: 1400px) {
@@ -15,6 +22,10 @@
 
 		@media (max-width: 1000px) {
 			padding: 0px 0px 0% 0px;
+		}
+
+		@media (max-width: 480px) {
+			padding: 10%;
 		}
 
 		img {
@@ -32,7 +43,7 @@
 	&__content {
 		position: relative;
 		z-index: 1;
-		width: 584px;
+		max-width: 584px;
 		top: 184px;
 		left: 27%;
 
@@ -42,8 +53,9 @@
 		}
 
 		@media (max-width: 480px) {
-			top: 5%;
-			left: 5%;
+			top: -5px;
+			left: -9%;
+			max-width: 240px;
 		}
 	}
 
@@ -51,14 +63,14 @@
 
 	&__content-title {
 		color: #333333;
-		@include adaptive-font(50, 30);
+		@include adaptive-font(50, 27);
 		font-weight: 600;
 		line-height: 60px;
 		margin: 0px 0px 30px 0px;
 
 		@media (max-width: 480px) {
 			line-height: 30px;
-			margin: 0 0 115px 0;
+			margin: 0 0 15px 0;
 		}
 
 		span {
@@ -75,6 +87,11 @@
 		font-weight: 400;
 		line-height: 25px;
 		margin: 0px 0px 30px 0px;
+
+		@media (max-width: 480px) {
+			margin: 0px 0px 15px 0px;
+
+		}
 	}
 
 	// .main-slider__content-btn
@@ -88,5 +105,9 @@
 		font-size: 14px;
 		font-weight: 600;
 		text-transform: uppercase;
+
+		@media (max-width: 480px) {
+			padding: 10px 25px;
+		}
 	}
 }

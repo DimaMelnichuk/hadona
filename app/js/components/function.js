@@ -87,15 +87,23 @@ $(function(){
 		slidesToScroll: 1,
 		responsive: [
 			{
-				breakpoint: 1100,
+				breakpoint: 1000,
 				settings: {
 					slidesToShow: 2,
 				}
 			},
 			{
-				breakpoint: 700,
+				breakpoint: 769,
+				settings: {
+					slidesToShow: 2,
+					arrows: false,
+				}
+			},
+			{
+				breakpoint: 600,
 				settings: {
 					slidesToShow: 1,
+					arrows: false,
 				}
 			}
 			]

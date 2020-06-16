@@ -79,7 +79,7 @@
 	}
 
 	&__link-btn {
-		font-size: 0;
+		font-size: 19px;
 		background: transparent;
 	}
 
@@ -94,13 +94,9 @@
 			width: 30px;
 			height: 20px;
 			right: 20px;
-			top: 26px;
+			top: 20px;
 			cursor: pointer;
 			z-index: 5;
-
-			&.active{
-				position: fixed;
-			}
 
 			&::after,
 			&::before {

@@ -17,22 +17,20 @@
 	&__item-title {
 		position: relative;
 		font-size: 16px;
+		font-weight: 600;
 		color: #000;
+		text-transform: uppercase;
 		cursor:pointer;
 		background: $white;
-		padding: 15px 55px 15px 50px;
+		padding: 10px 30px 10px 30px;
 		border-radius: 50px;
 		transition:all .2s linear 0;
 
 		&:after {
-			content: "\f177";
+			content: "\f107";
 			font-family: 'fontello';
-			height: 35px;
-			width: 35px;
 			position: absolute;
-			right: 7px;
-			top: 7px;
-			line-height: 35px;
+			right: 20px;
 			border-radius: 50%;
 			text-align: center;
 			color: #000;
@@ -47,7 +45,7 @@
 		background: $red;
 
 		&:after {
-			content: "\f178";
+			content: "\f106";
 			font-family: 'fontello';
 			color: #fff;
 		}
