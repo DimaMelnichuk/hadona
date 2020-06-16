@@ -130,6 +130,13 @@ $(function(){
 
 
 
+let user_icon = document.querySelector('.menu__link-search');
+let user_menu = document.querySelector('.search');
+user_icon.addEventListener("click", function (e) {
+	user_menu.classList.toggle('active');
+});
+
+
 /***************** Menu-btn ********************/
 let menu_burger = document.querySelector('.menu__burger');
 let menu = document.querySelector('.menu');

@@ -74,13 +74,93 @@
 		text-transform: uppercase;
 
 		&:hover {
-			color: #e12121;;
+			color: #e12121;
+		}
+	}
+
+	// .menu__item-dropdown
+
+	&__item-dropdown {
+	}
+
+	// .menu__link
+
+	&__link {
+	}
+
+	// .menu__submenu
+
+	&__submenu {
+		position: absolute;
+		left: 0;
+		top: 61px;
+		width: 1000px;
+		padding: 20px;
+		z-index: 100;
+		display: none;
+		background: #000;
+		border-top: 1px solid #e12121;
+
+		.menu__item::before,
+		.menu__item:last-child::after{
+			content: none;
+		}
+
+		.menu__link {
+			padding: 10px 0px;
+			text-transform: capitalize;
+		}
+	}
+
+	&__submenu-row {
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	&__submenu-column {
+		flex: 0 1 25%;
+	}
+
+	// .menu__submenu-title
+
+	&__submenu-title {
+		color: #ffffff;
+		font-size: 16px;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin: 0px 0px 30px 0px;
+	}
+
+	// .menu__submenu-item
+
+	&__submenu-item {
+		position: relative;
+	}
+
+	&__item:hover .menu__submenu{
+		display: block;
+	}
+
+	// .menu__submenu-link
+
+	&__submenu-link {
+		font-weight: 400;
+		transition: color .3s ease, transform .3s ease;
+
+		&:hover {
+			color: $white;
+			transform: translateX(10px);
 		}
 	}
 
 	&__link-btn {
 		font-size: 19px;
 		background: transparent;
+	}
+
+	&__link-search {
+		position: relative;
+		cursor: pointer;
 	}
 
 	// .menu__burger

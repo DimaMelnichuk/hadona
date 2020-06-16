@@ -1,0 +1,44 @@
+.search {
+	position: absolute;
+	top: 61px;
+	left: 40%;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .3s;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+	// .search__form
+
+	&__form {
+		background: #000;
+		height: 60px;
+		width: 400px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px;
+		border-top: 1px solid #e12121;
+	}
+
+	// .search__form-text
+
+	&__form-text {
+		height: 45px;
+		padding: 10px;
+		width: 100%;
+	}
+
+	// .search__form-btn
+
+	&__form-btn {
+		height: 45px;
+		background: transparent;
+		color: #fff;
+		text-transform: uppercase;
+		font-weight: 600;
+		margin-left: 10px;
+	}
+}
