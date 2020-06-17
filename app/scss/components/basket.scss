@@ -8,8 +8,6 @@
 
 	&__setting {
 		position: relative;
-		padding: 20px;
-		cursor: pointer;
 
 		&::after {
 			position: absolute;
@@ -23,11 +21,37 @@
 			top: 0;
 		}
 
+		&:hover .basket__setting-icon{
+			i,
+			span {
+				color: #e12121;
+			}
+			
+		}
+
+	}
+
+	&__setting-icon {
+		display: flex;
+		align-items: center;
+		padding: 20px;
+		cursor: pointer;
+		color: #888888;
+
+		&.active {
+			color: #e12121;
+		}
+
 		span {
-			color: #888888;
 			font-size: 13px;
 			font-weight: 400;
+			margin: 0px 7px 0px 7px;
 		}
+
+		i {
+			font-size: 19px;
+		}
+
 	}
 
 	// .cart__wallet

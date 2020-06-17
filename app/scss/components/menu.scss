@@ -69,7 +69,6 @@
 		font-family: Poppins;
 		font-size: 16px;
 		font-weight: 400;
-		line-height: 22px;
 		padding: 20px;
 		text-transform: uppercase;
 
@@ -95,7 +94,7 @@
 		left: 0;
 		top: 61px;
 		width: 1000px;
-		padding: 20px;
+		padding: 25px;
 		z-index: 100;
 		display: none;
 		background: #000;
@@ -115,10 +114,12 @@
 	&__submenu-row {
 		display: flex;
 		flex-flow: row wrap;
+		margin: 0px -13px;
 	}
 
 	&__submenu-column {
 		flex: 0 1 25%;
+		padding: 0px 13px;
 	}
 
 	// .menu__submenu-title
@@ -129,6 +130,19 @@
 		font-weight: 600;
 		text-transform: uppercase;
 		margin: 0px 0px 30px 0px;
+		position: relative;
+
+		&::before {
+			position: absolute;
+			display: block;
+			content: "";
+			background-color: #ffffff;
+			opacity: 0.1;
+			height: 1px;
+			width: 100%;
+			bottom: -20px;
+			left: 0;
+		}
 	}
 
 	// .menu__submenu-item
@@ -153,12 +167,14 @@
 		}
 	}
 
+	&__submenu-img {
+		width: 100%;
+		height: 100%;
+	}
+
 	&__link-btn {
 		font-size: 19px;
 		background: transparent;
-	}
-
-	&__link-search {
 		position: relative;
 		cursor: pointer;
 	}

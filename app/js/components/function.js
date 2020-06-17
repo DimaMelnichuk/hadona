@@ -129,15 +129,42 @@ $(function(){
 });
 
 
-
-let user_icon = document.querySelector('.menu__link-search');
-let user_menu = document.querySelector('.search');
-user_icon.addEventListener("click", function (e) {
-	user_menu.classList.toggle('active');
+/***************** Menu-setting ********************/
+let setting_icon = document.querySelector('.basket__setting-icon');
+let setting_menu = document.querySelector('.setting');
+setting_icon.addEventListener("click", function (e) {
+	setting_menu.classList.toggle('active');
 });
 
+document.documentElement.addEventListener("click", function (e) {
+	if (!e.target.closest('.basket__setting')) {
+		setting_menu.classList.remove('active');
+	}
+});
 
-/***************** Menu-btn ********************/
+setting_icon.addEventListener("click", function (e) {
+	setting_icon.classList.toggle('active');
+});
+
+document.documentElement.addEventListener("click", function (e) {
+	if (!e.target.closest('.basket__setting')) {
+		setting_icon.classList.remove('active');
+	}
+});
+
+/***************** Menu-search ********************/
+let search_icon = document.querySelector('.menu__link-btn');
+let search_menu = document.querySelector('.search');
+search_icon.addEventListener("click", function (e) {
+	search_menu.classList.toggle('active');
+});
+
+document.documentElement.addEventListener("click", function (e) {
+	if (!e.target.closest('.menu__item-search')) {
+		search_menu.classList.remove('active');
+	}
+});
+/***************** Menu-burger ********************/
 let menu_burger = document.querySelector('.menu__burger');
 let menu = document.querySelector('.menu');
 menu_burger.addEventListener("click", function (e) {
