@@ -125,10 +125,26 @@ $(function(){
 	$("body").css("background",$(this).attr("data-color"));
 	$(".special-product__image").css("background-image",$(this).attr("data-pic"));
 	});
+
+	$('.wallet__cart-close').click(function() {
+		$("#wallet__cart_1").remove();
+	 });  
  
 });
 
 
+
+let wallet_icon = document.querySelector('.basket__wallet-icon');
+let wallet_menu = document.querySelector('.wallet');
+wallet_icon.addEventListener("click", function (e) {
+	wallet_menu.classList.toggle('active');
+});
+
+document.documentElement.addEventListener("click", function (e) {
+	if (!e.target.closest('.basket__wallet')) {
+		wallet_menu.classList.remove('active');
+	}
+});
 /***************** Menu-setting ********************/
 let setting_icon = document.querySelector('.basket__setting-icon');
 let setting_menu = document.querySelector('.setting');

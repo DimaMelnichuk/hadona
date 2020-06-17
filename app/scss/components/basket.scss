@@ -58,12 +58,18 @@
 
 	&__wallet {
 		padding: 20px;
-		cursor: pointer;
 		display: flex;
 	}
 
 	&__wallet-icon {
-		margin: 0px 8px 0px 0px;
+		display: flex;
+		cursor: pointer;
+		
+		i {
+			margin: 0px 8px 0px 0px;
+			color: #888888;
+			font-size: 19px;
+		}
 	}
 
 	// .cart__wallet-price
@@ -74,17 +80,9 @@
 		font-weight: 400;
 		line-height: 20px;
 		
+		span {
+			color: #e12020;
+		}
 	}
 
-	// .cart__wallet-sum
-
-	&__wallet-sum {
-		color: #e12020;
-	}
-
-	// .cart__wallet-total
-
-	&__wallet-total {
-		color: #e12020;
-	}
 }
