@@ -1,0 +1,35 @@
+.breadcrumbs {
+	// .breadcrumbs__list
+
+	&__list {
+		padding: 22px 0px;
+		display: flex;
+		border-bottom: 1px solid #dddddd;
+	}
+
+	// .breadcrumbs__item
+
+	&__item {
+		font-size: 13px;
+		font-weight: 400;
+		color: #333333;
+	}
+
+	// .breadcrumbs__link
+
+	&__link {
+		color: #888888;
+		position: relative;
+		margin: 0px 24px 0px 0px;
+
+		&::after {
+			content: ">";
+			position: absolute;
+			margin: 0px 0px 0px 12px;
+		}
+
+		&:hover {
+			color: #333333;
+		}
+	}
+}
