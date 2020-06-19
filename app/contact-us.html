@@ -8,68 +8,10 @@
 	<div class="wrapper">
 	@@include('_header.html')
 		<main class="page">
-			<!-- page-policy -->
-			<div class="page-policy">
-				<div class="container">
-					<div class="page-policy__row">
-						<div class="page-policy__column">
-							<div class="page-policy__item">
-								<div class="page-policy__img">
-									<img src="img/icons/checked_truck_50px.png" alt="">
-								</div>
-								<div class="page-policy__body">
-									<div class="page-policy__body-title">Freeshipping on order over $100 </div>
-									<div class="page-policy__body-text">Lorem Ipsum is simply dummy text of the printing  industry. </div>
-								</div>
-							</div>
-						</div>
-						<div class="page-policy__column">
-							<div class="page-policy__item">
-								<div class="page-policy__img">
-									<img src="img/icons/sale_50px.png" alt="">
-								</div>
-								<div class="page-policy__body">
-									<div class="page-policy__body-title">10% off the bill</div>
-									<div class="page-policy__body-text">Lorem Ipsum is simply dummy text of the printing  industry.</div>
-								</div>
-							</div>
-						</div>
-						<div class="page-policy__column">
-							<div class="page-policy__item">
-								<div class="page-policy__img">
-									<img src="img/icons/knight_shield_50px.png" alt="">
-								</div>
-								<div class="page-policy__body">
-									<div class="page-policy__body-title">Security payment</div>
-									<div class="page-policy__body-text">Lorem Ipsum is simply dummy text of the printing  industry.</div>
-								</div>
-							</div>
-						</div>
-						<div class="page-policy__column">
-							<div class="page-policy__item">
-								<div class="page-policy__img">
-									<img src="img/icons/headset_50px.png" alt="">
-								</div>
-								<div class="page-policy__body">
-									<div class="page-policy__body-title">live Support</div>
-									<div class="page-policy__body-text">Lorem Ipsum is simply dummy text of the printing  industry.</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- page-policy end -->
-			<!-- breadcrumbs -->
-			<div class="breadcrumbs">
-				<div class="container">
-					<ul class="breadcrumbs__list">
-						<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Home</a></li>
-						<li class="breadcrumbs__item">Contact us</li>
-					</ul>
-				</div>
-			</div>
-			<!-- breadcrumbs end -->
+			@@include('_page-policy.html')
+			@@include('_breadcrumbs.html',{
+				"breadcrumbs-name":"Contact us"
+			})
 			<!-- contact-us -->
 			<div class="contact-us">
 				<div class="container">
