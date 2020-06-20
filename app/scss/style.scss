@@ -24,6 +24,7 @@
 @import "blocks/page-policy";
 @import "blocks/contact-us";
 @import "blocks/all-categories";
+@import "blocks/blog-list";
 @import "blocks/footer";
 
 // Components
@@ -37,6 +38,12 @@
 @import "components/setting";
 @import "components/wallet";
 @import "components/breadcrumbs";
+@import "components/sidebar-search";
+@import "components/sidebar-categories";
+@import "components/sidebar-post";
+@import "components/sidebar-tags";
+@import "components/sidebar-block";
+@import "components/pagination";
 
 /* ==========================================================================
   General Styles

@@ -1,5 +1,4 @@
 .basket {
-	position: relative;
 	z-index: 3;
 	display: flex;
 	align-items: center;
@@ -57,11 +56,12 @@
 	// .cart__wallet
 
 	&__wallet {
-		padding: 20px;
+		position: relative;
 		display: flex;
 	}
 
 	&__wallet-icon {
+		padding: 20px;
 		display: flex;
 		cursor: pointer;
 		

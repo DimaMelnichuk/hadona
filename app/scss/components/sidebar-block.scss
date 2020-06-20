@@ -1,0 +1,11 @@
+.sidebar-block {
+
+	// .sidebar-block__img
+
+	&__img img {
+		height: 405px;
+		width: 100%;
+		object-position: center;
+		object-fit: cover;
+	}
+}

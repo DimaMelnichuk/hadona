@@ -1,0 +1,41 @@
+.pagination {
+
+	// .pagination__list
+
+	&__list {
+		display: flex;
+	}
+
+	// .pagination__item
+
+	&__item {
+		margin: 0px 10px 0px 0px;
+	}
+
+	// .pagination__link
+
+	&__link {
+		display: inline-block;
+		text-align: center;
+		line-height: 30px;
+		width: 30px;
+		height: 30px;
+		border-radius: 5px;
+		border: 1px solid #dddddd;
+		background-color: #ffffff;
+		color: #888888;
+		font-size: 13px;
+		font-weight: 400;
+		transition: background-color .3s, color .3s;
+
+		&:hover {
+			background-color: #e12020;
+			color: #fff;
+		}
+
+		&.active {
+			background-color: #e12020;
+			color: #fff;
+		}
+	}
+}
