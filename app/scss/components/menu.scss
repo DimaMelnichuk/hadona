@@ -191,6 +191,43 @@
 		cursor: pointer;
 	}
 
+	&__dropdown {
+		position: absolute;
+		top: 100%;
+		width: 235px;
+		z-index: 100;
+		display: none;
+		background: #000;
+		border-top: 1px solid #e12121;
+	}
+
+	&__dropdown-item  {
+		position: relative;
+    	width: 100%;
+    	border-bottom: 1px solid rgba(#fff, .1);
+		transition: background 500ms ease;
+		 
+		&:hover {
+			background: #e12121;
+		}
+	}
+
+	&__item:hover .menu__dropdown{
+		display: block;
+	}
+
+	&__dropdown-link {
+		text-transform: capitalize;
+		padding: 15px 30px;
+		font-weight: 400;
+		transition: color .3s ease, transform .3s ease;
+
+		&:hover {
+			color: #fff;
+			transform: translateX(10px);
+		}
+	}
+
 	// .menu__burger
 
 	&__burger {
