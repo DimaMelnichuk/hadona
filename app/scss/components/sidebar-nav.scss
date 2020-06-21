@@ -1,0 +1,129 @@
+.sidebar-nav {
+	position: relative;
+
+	margin: 0px 0px 50px 0px;
+	border-radius: 5px;
+	background-color: rgba(225, 33, 33, 0.9);
+	// .sidebar-nav__title
+
+	&__title {
+		position: relative;
+		color: #ffffff;
+		font-size: 20px;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin: 0px 0px 20px 0px;
+		padding: 20px;
+		border-bottom: 1px solid rgba(#000000, .2);
+
+		&::after {
+			content: "";
+			position: absolute;
+			height: 1px;
+			opacity: 0.2;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			background: #000000;
+		}
+	}
+
+	// .sidebar-nav__list
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .sidebar-nav__item
+
+	&__item {
+		position: relative;
+		left: 0;
+		right: 0;
+		width: 100%;
+	  	transition: background 500ms ease;
+		
+	  &:hover {
+		  background: #fff;
+
+		  .sidebar-nav__link {
+				color: #333333;
+				transform: translateX(10px);
+		  }
+	  }
+	}
+
+	// .sidebar-nav__link
+
+	&__link {
+		position: relative;
+		display: block;
+		padding: 12px 20px;
+		color: #ffffff;
+		font-weight: 400;
+		font-size: 13px;
+		transition: color .3s ease, transform .3s ease;
+	}
+
+	&__icon {
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&__dropdown {
+		position: absolute;
+		top: -45px;
+		left: 100%;
+		z-index: 100;
+		width: 480px;
+		display: none;
+		padding: 30px;
+		background: #ffffff;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		border-radius: 5px;
+	}
+
+	&__dropdown-row {
+		display: flex;
+		margin: 0px -25px;
+	}
+
+	&__dropdown-column {
+		flex: 0 1 50%;
+		padding: 0px 25px;
+	}
+
+	&__dropdown-item  {
+
+	}
+
+	&__item:hover .sidebar-nav__dropdown{
+		display: block;
+	}
+
+	&__dropdown-title {
+		font-weight: 600;
+		color: #333333;
+		text-transform: uppercase;
+		margin: 0px 0px 7px 0px;
+	}
+
+	&__dropdown-link {
+		color: #888888;
+		font-size: 13px;
+		font-weight: 400;
+		text-transform: capitalize;
+		display: block;
+		padding: 12px 0px;
+		transition: color .3s ease, transform .3s ease;
+
+		&:hover {
+			color: #e12121;
+			transform: translateX(10px);
+		}
+	}
+
+}
