@@ -59,6 +59,7 @@ $(function(){
 			},
 			]
 	});
+	
 
 	$('.testimonials__slider').slick({
 		arrows: false,
@@ -107,6 +108,18 @@ $(function(){
 				}
 			}
 			]
+	});
+
+	$('.featured-product__slider').slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		arrows: true,
+	});
+
+	$('.popular-product__slider').slick({
+		slidesToShow: 8,
+		slidesToScroll: 1,
+		arrows: true,
 	});
 
 

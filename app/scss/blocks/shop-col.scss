@@ -60,6 +60,7 @@
 		padding: 0px 15px;
 		display: flex;
 		flex-direction: column;
+		min-width: 0;
 	}
 
 	// .shop-col__content-sponsor
@@ -70,5 +71,16 @@
 	// .shop-col__content-product
 
 	&__content-product {
+		margin: 0px 0px 50px 0px;
+	}
+
+	&__content-featured {
+		margin: 0px 0px 50px 0px;
+	}
+	&__content-information {
+		margin: 0px 0px 50px 0px;
+	}
+	&__content-popular {
+		
 	}
 }
