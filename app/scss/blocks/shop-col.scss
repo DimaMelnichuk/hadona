@@ -2,10 +2,6 @@
 	padding: 50px 0px 90px;
 	// .shop-col__body
 
-	img {
-		display: none;
-	}
-
 	&__body {
 		display: flex;
 		margin: 0px -15px;
@@ -38,6 +34,25 @@
 		}
 	}
 
+	&__sidebar-nav {
+		margin: 0px 0px 50px 0px;
+	}
+
+	&__sidebar-new {
+		margin: 0px 0px 30px 0px;
+	}
+
+	&__sidebar-block {
+		margin: 0px 0px 50px 0px;
+	}
+
+	&__sidebar-news {
+		margin: 0px 0px 50px 0px;
+	}
+
+	&__sidebar-tags {
+
+	}
 	// .shop-col__content
 
 	&__content {

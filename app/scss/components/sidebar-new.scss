@@ -1,0 +1,36 @@
+.sidebar-new {
+	// .sidebar-new__item
+
+	&__item {
+		display: flex;
+		margin: 0px 0px 20px 0px;
+	}
+
+	// .sidebar-new__item-img
+
+	&__item-img {
+		margin: 0px 10px 0px 0px;
+
+		img {
+			width: 90px;
+			height: 90px;
+    		object-fit: contain;
+			border-radius: 5px;
+		}
+	}
+
+	// .sidebar-new__item-title
+
+	&__item-title {
+		color: #888888;
+		line-height: 22px;
+		font-weight: 400;
+		font-size: 16px;
+
+		span {
+			color: #e12020;
+			text-transform: uppercase;
+			font-weight: 600;
+		}
+	}
+}
