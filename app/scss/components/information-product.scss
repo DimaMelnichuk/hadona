@@ -5,6 +5,11 @@
 	&__row {
 		display: flex;
 		margin: 0px -15px;
+
+		@media (max-width: 1000px) {
+			margin: -10px 0px;
+			flex-direction: column;
+		}
 	}
 
 	// .information-product__column
@@ -12,6 +17,10 @@
 	&__column {
 		flex: 0 1 50%;
 		padding: 0px 15px;
+
+		@media (max-width: 1000px) {
+			padding: 10px 0px;
+		}
 	}
 
 	// .information-product__img
@@ -20,6 +29,14 @@
 		padding: 0px 0px 30% 0px;
 		overflow: hidden;
 		position: relative;
+
+		@media (max-width: 1000px) {
+			padding: 0 0 25% 0;
+		}
+
+		@media (max-width: 600px) {
+			padding: 0 0 45% 0;
+		}
 
 		img {
 			width: 100%;

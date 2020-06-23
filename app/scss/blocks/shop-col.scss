@@ -1,5 +1,9 @@
 .shop-col {
 	padding: 50px 0px 90px;
+
+	@media (max-width: 768px) {
+		padding: 20px 0 20px;
+	}
 	// .shop-col__body
 
 	&__body {
@@ -14,15 +18,18 @@
 	// .shop-col__sidebar
 
 	&__sidebar {
-		flex: 0 1 16.7%;
+		flex: 1 1 16.7%;
+		min-width: 235px;
 		padding: 0px 15px;
 		display: flex;
 		flex-direction: column;
+		
 		
 		@media (max-width: 768px) {
 			margin: 50px 0px 0px 0px;
 			flex-flow: row wrap;
 			justify-content: space-between;
+			order: 2;
 
 			&>div {
 				flex: 0 1 48%;
@@ -34,20 +41,26 @@
 		}
 	}
 
-	&__sidebar-nav {
+	&__sidebar-nav,
+	&__sidebar-block,
+	&__sidebar-news {
 		margin: 0px 0px 50px 0px;
+
+		@media (max-width: 768px) {
+			margin: 0px 0px 30px 0px;
+		}
+
+		@media (max-width: 400px) {
+			margin: 0px 0px 15px 0px;
+		}
 	}
 
 	&__sidebar-new {
 		margin: 0px 0px 30px 0px;
-	}
 
-	&__sidebar-block {
-		margin: 0px 0px 50px 0px;
-	}
-
-	&__sidebar-news {
-		margin: 0px 0px 50px 0px;
+		@media (max-width: 400px) {
+			margin: 0px 0px 15px 0px;
+		}
 	}
 
 	&__sidebar-tags {
@@ -61,6 +74,7 @@
 		display: flex;
 		flex-direction: column;
 		min-width: 0;
+		order: 1;
 	}
 
 	// .shop-col__content-sponsor
@@ -81,6 +95,6 @@
 		margin: 0px 0px 50px 0px;
 	}
 	&__content-popular {
-		
+		margin: 0px 0px 30px 0px;
 	}
 }

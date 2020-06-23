@@ -162,10 +162,6 @@
 	.popular-product__slider-item {
 		border-color: #e12121;
 
-
-	}
-	.popular-product__categories {
-		overflow: visible;
 		&::after {
 			content: "";
 			position: absolute;
@@ -177,5 +173,8 @@
 			border-right: 5px solid transparent;
 		}
 	}
+}
 
+.popular-product__slider .slick-list {
+	padding-bottom: 5px;
 }

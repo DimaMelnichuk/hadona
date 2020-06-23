@@ -114,12 +114,114 @@ $(function(){
 		slidesToShow: 5,
 		slidesToScroll: 1,
 		arrows: true,
+		responsive: [
+			{
+				breakpoint: 1480,
+				settings: {
+					slidesToShow: 4,
+				}
+			},
+			{
+				breakpoint: 1100,
+				settings: {
+					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 900,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 769,
+				settings: {
+					slidesToShow: 3,
+					arrows: false,
+				}
+			},
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 2,
+					arrows: false,
+				}
+			},
+			{
+				breakpoint: 450,
+				settings: {
+					slidesToShow: 1,
+					arrows: false,
+				}
+			}
+			]
 	});
 
 	$('.popular-product__slider').slick({
 		slidesToShow: 8,
 		slidesToScroll: 1,
 		arrows: true,
+		/* asNavFor: '.slider-for', */
+		responsive: [
+			{
+				breakpoint: 1500,
+				settings: {
+					slidesToShow: 7,
+				}
+			},
+			{
+				breakpoint: 1330,
+				settings: {
+					slidesToShow: 6,
+				}
+			},
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 5,
+				}
+			},
+			{
+				breakpoint: 1030,
+				settings: {
+					slidesToShow: 4,
+				}
+			},
+			{
+				breakpoint: 900,
+				settings: {
+					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 769,
+				settings: {
+					slidesToShow: 4,
+					arrows: false,
+				}
+			},
+			{
+				breakpoint: 650,
+				settings: {
+					slidesToShow: 3,
+					arrows: false,
+				}
+			},
+			{
+				breakpoint: 500,
+				settings: {
+					slidesToShow: 2,
+					arrows: false,
+				}
+			},
+			{
+				breakpoint: 350,
+				settings: {
+					slidesToShow: 1,
+					arrows: false,
+				}
+			}
+			]
 	});
 
 
