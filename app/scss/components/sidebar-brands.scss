@@ -1,0 +1,15 @@
+.sidebar-brands {
+	padding: 20px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	// .sidebar-brands__title
+
+	&__title {
+		color: #333333;
+		font-size: 16px;
+		font-weight: 900;
+		text-transform: uppercase;
+		margin: 0px 0px 20px 0px;
+		padding: 0px 0px 20px 0px;	
+	}
+}

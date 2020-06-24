@@ -26,6 +26,7 @@
 @import "blocks/all-categories";
 @import "blocks/blog-list";
 @import "blocks/shop-col";
+@import "blocks/all-categories-grid";
 @import "blocks/footer";
 
 // Components
@@ -53,6 +54,10 @@
 @import "components/popular-product";
 @import "components/pagination";
 @import "components/countdown";
+@import "components/checkbox";
+@import "components/sidebar-brands";
+@import "components/slider-grid";
+@import "components/carts-grid";
 
 /* ==========================================================================
   General Styles

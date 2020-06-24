@@ -1,0 +1,17 @@
+.carts-grid {
+
+	// .carts-grid__row
+
+	&__row {
+		display: flex;
+		flex-flow: row wrap;
+		margin: -15px -15px;
+	}
+
+	// .carts-grid__column
+
+	&__column {
+		flex: 0 1 20%;
+		padding: 15px 15px;
+	}
+}

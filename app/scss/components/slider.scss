@@ -43,6 +43,34 @@
 .slick-next:hover {
 	background-color: #da4b4b;
 }
+
+.slick-dots{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	z-index: 10;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.slick-dots li:not(:last-child){
+	margin: 0px 10px 0px 0px;
+}
+	
+.slick-dots li.slick-active button{
+	background-color: transparent;
+}
+	
+.slick-dots button{
+	width: 16px;
+	height: 16px;
+	border: 3px solid #eaeaea;
+	border-radius: 50%;
+	outline: none;
+	font-size: 0;
+	padding: 0;
+}
 /* ==========================================================================
   main-slider
 ========================================================================== */
@@ -178,3 +206,6 @@
 .popular-product__slider .slick-list {
 	padding-bottom: 5px;
 }
+/* ==========================================================================
+  
+========================================================================== */

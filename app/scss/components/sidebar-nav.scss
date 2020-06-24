@@ -1,18 +1,24 @@
 .sidebar-nav {
 	position: relative;
 	border-radius: 5px;
-	background-color: rgba(225, 33, 33, 0.9);
 	// .sidebar-nav__title
 
 	&__title {
 		position: relative;
-		color: #ffffff;
 		font-size: 20px;
 		font-weight: 600;
 		text-transform: uppercase;
 		margin: 0px 0px 20px 0px;
 		padding: 20px;
 		border-bottom: 1px solid rgba(#000000, .2);
+
+		&--light {
+			color: #ffffff;
+		}
+
+		&--dark {
+			color: #333333;
+		}
 
 		&::after {
 			content: "";
@@ -58,10 +64,17 @@
 		position: relative;
 		display: block;
 		padding: 12px 20px;
-		color: #ffffff;
 		font-weight: 400;
 		font-size: 13px;
 		transition: color .3s ease, transform .3s ease;
+
+		&--light {
+			color: #ffffff;
+		}
+
+		&--dark {
+			color: #333333;
+		}
 	}
 
 	&__icon {

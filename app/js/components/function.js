@@ -224,6 +224,13 @@ $(function(){
 			]
 	});
 
+	$('.slider-grid').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: true,
+	});
+
 
    $(".cart__body-shuffle").click(function(event){
 		$(this).toggleClass("active");
@@ -244,6 +251,18 @@ $(function(){
 	$('.wallet__cart-close').click(function() {
 		$("#wallet__cart_1").remove();
 	 });  
+
+
+	 /***************** Name ********************/
+	 $('.checkmark').on('click', function(event) {
+		if($(this).hasClass('active')){
+			$(this).find('input').prop('checked',false);
+		}else{
+			$(this).find('input').prop('checked',true);
+		}
+		$(this).toggleClass('active');
+		return false;
+	});
  
 });
 
