@@ -1,0 +1,61 @@
+.toolbar {
+
+	// .toolbar__row
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid #dddddd;
+		padding: 0px 0px 20px 0px;
+	}
+
+	// .toolbar__sort-icon
+
+	&__sort-link {
+		display: inline-block;
+		color: #888888;
+		margin: 0px 15px 0px 0px;
+
+		@media (max-width: 500px) {
+			margin: 0px 15px 10px 0px;
+		}
+
+		&:hover {
+			color: #e12121;	
+		}
+	}
+
+	// .toolbar__sort-result
+
+	&__sort-result {
+		color: #888888;
+		font-size: 13px;
+		font-weight: 400;
+
+		@media (max-width: 500px) {
+			display: block;
+		}
+	}
+
+	// .toolbar__select-sort
+
+	&__select-sort {
+
+		select {
+			width: 168px;
+			height: 30px;
+			border-radius: 5px;
+			border: 1px solid #dddddd;
+			background-color: #ffffff;
+
+			color: #888888;
+			font-size: 13px;
+			font-weight: 400;
+			padding: 0px 10px;
+
+			@media (max-width: 500px) {
+				width: 130px;
+			}
+		}
+	}
+}

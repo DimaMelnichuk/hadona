@@ -77,12 +77,16 @@
 		background-color: #ffffff;
 	}
 
+	&__content-toolbar {
+		margin: 0px 0px 30px 0px;
+	}
+
 	// .all-categories-grid__content-featured
 
 	&__content-featured {
 	}
 
 	&__content-pagination {
-		margin: 0 auto 80px; 
+		margin: 60px auto 80px; 
 	}
 }

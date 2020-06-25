@@ -44,12 +44,12 @@
  
  /* On mouse-over, add a grey background color */
  .label:hover input ~ .checkmark {
-	background-color: #dddddd;
+	border-color: #e12121;
  }
  
  /* When the radio button is checked, add a blue background */
  .label input:checked ~ .checkmark {
-	background-color: #dddddd;
+	background-color: #e12121;
  }
  
  /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -66,7 +66,7 @@
  
  /* Style the indicator (dot/circle) */
  .label .checkmark:after {
-	top: 8px;
+	top: 10px;
 	left: 8px;
 	width: 9px;
 	height: 9px;
