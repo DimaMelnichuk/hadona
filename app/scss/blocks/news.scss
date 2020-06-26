@@ -17,6 +17,21 @@
 		padding: 30px 0px;
 	}
 
+	&__row {
+		display: flex;
+
+		@media (max-width: 1300px) {
+			flex-direction: column;
+		}
+	}
+
+	&__column {
+		flex: 0 1 33.333%;
+
+
+
+	}
+
 	// .news__slider
 
 	&__slider {
