@@ -81,23 +81,15 @@
 		order: 1;
 	}
 
-	// .shop-col__content-sponsor
-
-	&__content-sponsor {
-	}
-
 	// .shop-col__content-product
 
-	&__content-product {
-		margin: 0px 0px 50px 0px;
-	}
-
-	&__content-featured {
-		margin: 0px 0px 50px 0px;
-	}
+	&__content-product,
+	&__content-sponsor,
+	&__content-featured,
 	&__content-information {
 		margin: 0px 0px 50px 0px;
 	}
+	
 	&__content-popular {
 		margin: 0px 0px 30px 0px;
 	}
