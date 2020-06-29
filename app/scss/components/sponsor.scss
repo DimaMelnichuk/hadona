@@ -6,16 +6,25 @@
 	&__row {
 		display: flex;
 		flex-flow: row wrap;
+		margin: -15px 0px;
 	}
 
 	// .sponsor__column
 
 	&__column {
 		flex: 0 1 12.5%;
+		padding: 15px 0px;
 
 		@media (max-width: 1000px) {
 			flex: 0 1 25%;
 		}
+	}
+
+	&__title {
+		color: #333333;
+		font-size: 30px;
+		font-weight: 800;
+		margin: 0px 0px 15px 0px;
 	}
 
 	// .sponsor__item
