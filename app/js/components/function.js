@@ -308,6 +308,18 @@ $(document).focusout(function() {
 	$(".sidebar-price__polzunok-line").slider( "values", [ input_left, input_right ] );
 }); */
  
+	  /***************** Tab-menu ********************/
+	  $(".tabs__container:first").show()
+	  $(".tabs__nav li:first").addClass('active');
+  
+	 $(".tabs__nav li").click(function(event) {
+		index = $(this).index();
+		$(".tabs__nav li").removeClass('active');
+		$(this).addClass('active');
+		$('.tabs__container').hide();
+		$('.tabs__container').eq(index).show();
+	 });
+
 });
 
 

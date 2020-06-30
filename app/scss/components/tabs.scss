@@ -1,0 +1,42 @@
+.tabs {
+	max-width: 100%;
+
+	&__nav {
+		display: flex;
+	 }
+	 
+	&__nav-item {
+		cursor:pointer;
+		color: #888888;
+		font-size: 20px;
+		font-weight: 800;
+		text-transform: uppercase;
+		transition: all 0.3s ease-in-out;
+
+		&:not(:last-child) {
+			margin: 0px 50px 0px 0px;
+		}
+
+		&.active,
+		&:hover {
+			color: #333333;
+		}
+	}
+
+	&__container {
+		display: none;
+		color: #888888;
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 22px;
+
+		span {
+			display: block;
+		}
+
+		&:not(:last-child) p {
+			margin: 0px 0px 15px 0px;
+		}
+	}
+
+ }
