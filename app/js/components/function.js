@@ -231,6 +231,24 @@ $(function(){
 		dots: true,
 	});
 
+	$('.cart-detail__slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true,
+		dots: false,
+		asNavFor: '.cart-detail__box',
+	});
+
+	$('.cart-detail__box').slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: false,
+		asNavFor: '.cart-detail__slider',
+	});
+
+
+
 
    $(".cart__body-shuffle").click(function(event){
 		$(this).toggleClass("active");
