@@ -265,7 +265,7 @@ $(function(){
 	});
 
 /***************** polzunok ********************/
-$(".sidebar-price__polzunok-line").slider({
+/* $(".sidebar-price__polzunok-line").slider({
 	min: 0,
 	max: 5000,
 	values: [2000, 3000],
@@ -306,7 +306,7 @@ $(document).focusout(function() {
 	$(".sidebar-price__polzunok-input-l").val(input_left); 
 	$(".sidebar-price__polzunok-input-r").val(input_right); 
 	$(".sidebar-price__polzunok-line").slider( "values", [ input_left, input_right ] );
-});
+}); */
  
 });
 

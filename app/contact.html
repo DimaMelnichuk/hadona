@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('_head.html',{
+		"title":"Home"
+	})
+<body>
+
+	<div class="wrapper">
+	@@include('_header.html')
+		<main class="page">
+			@@include('_page-policy.html')
+			@@include('_breadcrumbs.html',{
+				"breadcrumbs-name":"Contact us"
+			})
+			<!-- contact -->
+			<div class="contact">
+				<div class="container">
+					<div class="contact__row">
+						<div class="contact__column">
+							<div class="contact__title">Contact Us</div>
+							<div class="contact__descr">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+							
+							<div class="contact__offices">
+								<div class="contact__offices-row">
+									<div class="contact__offices-column">
+										<div class="contact__offices-img">
+											<img src="img/icons/domain_50px.png" alt="">
+										</div>
+										<div class="contact__offices-body">
+											<div class="contact__offices-name">Postal Address</div>
+											<div class="contact__offices-link">PO Box 16122 Collins Street West Victoria 8007 Australia</div>
+										</div>
+									</div>
+									<div class="contact__offices-column">
+										<div class="contact__offices-img">
+											<img src="img/icons/geo_fence_50px.png" alt="">
+										</div>
+										<div class="contact__offices-body">
+											<div class="contact__offices-name">Hadona Address</div>
+											<div class="contact__offices-link">121 King Street, Melbourne Victoria 3000 Australia</div>
+										</div>
+									</div>
+									<div class="contact__offices-column">
+										<div class="contact__offices-img">
+											<img src="img/icons/iphone_50px.png" alt="">
+										</div>
+										<div class="contact__offices-body">
+											<div class="contact__offices-name">Phone</div>
+											<a class="contact__offices-link" href="tel:+0123658479">+01 23 658 479</a>
+											<a class="contact__offices-link" href="tel:+0123658489">+01 23 658 489</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="contact__message">
+								<div class="contact__message-title">Send me a message</div>
+								<form action="" class="contact__message-form">
+									<input class="contact__message-text" type="text" placeholder="Yout name" required>
+									<input class="contact__message-email" type="email" name=""  placeholder="Your Email" required>
+									<textarea class="contact__message-message" name=""  placeholder="Your message" required></textarea>
+									<button class="contact__message-btn btn">Send message</button>
+								</form>
+							</div>
+						</div>
+						<div class="contact__column">
+							<div class="contact__map">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3724.1236571378945!2d105.83461191111452!3d21.027737617713612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab9926e7bd67%3A0x580e078874d5df1e!2z0YXRgNCw0Lwg0JvQuNGC0LXRgNCw0YLRg9GA0Ys!5e0!3m2!1sru!2sua!4v1593508065954!5m2!1sru!2sua" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- contact -->
+		</main>
+		@@include('_footer.html')
+	</div>
+
+	@@include('_js.html')
+</body>
+</html>

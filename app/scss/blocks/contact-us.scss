@@ -18,12 +18,6 @@
 		padding: 0px 15px 0px 15px;
 	}
 
-	// .contact-us__contact
-
-	&__contact {
-
-	}
-
 	// .contact-us__contact-title
 
 	&__contact-title {
@@ -212,8 +206,8 @@
 	&__map {
 		margin: 0px 0px 50px 0px;
 
-		img {
-			height: 100%;
+		iframe {
+			height: 605px;
 			width: 100%;
 			border: 5px solid #fff;
 		}
