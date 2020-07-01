@@ -54,13 +54,13 @@
 
 	  	&--dark {
 			&:hover {
-			background: #e12121;
+				background: #e12121;
 			}
 		}
 		  
 	  	&--light {
 			&:hover {
-			background: #fff;
+				background: #fff;
 			}
   		}
 	}
@@ -102,6 +102,20 @@
 		background: #ffffff;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 		border-radius: 5px;
+
+		&--img {
+			padding: 30px 30px 240px 30px;
+		}
+	}
+
+	&__dropdown-img {
+
+		img {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+		}
 	}
 
 	&__dropdown-row {
