@@ -266,11 +266,6 @@ $(function(){
 	$(".special-product__image").css("background-image",$(this).attr("data-pic"));
 	});
 
-	$('.wallet__cart-close').click(function() {
-		$("#wallet__cart_1").remove();
-	 });  
-
-
 	 /***************** Name ********************/
 	 $('.checkmark').on('click', function(event) {
 		if($(this).hasClass('active')){
@@ -373,14 +368,28 @@ $(document).focusout(function() {
 		$('.tabs__container').eq(index).show();
 	 });
 
+	 /***************** Add active for setting__currency-link ********************/
+	$('.setting__currency-link').click(function() {
+		$('.setting__currency-link').removeClass('active');
+		$(this).addClass('active')
+	});
+
+	/***************** Add active for  setting__lang-link ********************/
+	$('.setting__lang-link').click(function() {
+		$('.setting__lang-link').removeClass('active');
+		$(this).addClass('active')
+	});
+
 });
 
 
-
+/***************** Menu-wallet ********************/
 let wallet_icon = document.querySelector('.basket__wallet-icon');
 let wallet_menu = document.querySelector('.wallet');
+let wallet_lock = document.querySelector('body');
 wallet_icon.addEventListener("click", function (e) {
 	wallet_menu.classList.toggle('active');
+	wallet_lock.classList.toggle('lock');
 });
 
 document.documentElement.addEventListener("click", function (e) {
@@ -388,11 +397,23 @@ document.documentElement.addEventListener("click", function (e) {
 		wallet_menu.classList.remove('active');
 	}
 });
+
+wallet_icon.addEventListener("click", function (e) {
+	wallet_icon.classList.toggle('active');
+});
+
+document.documentElement.addEventListener("click", function (e) {
+	if (!e.target.closest('.basket__wallet')) {
+		wallet_icon.classList.remove('active');
+	}
+});
 /***************** Menu-setting ********************/
 let setting_icon = document.querySelector('.basket__setting-icon');
 let setting_menu = document.querySelector('.setting');
+let setting_lock = document.querySelector('body');
 setting_icon.addEventListener("click", function (e) {
 	setting_menu.classList.toggle('active');
+	setting_lock.classList.toggle('lock');
 });
 
 document.documentElement.addEventListener("click", function (e) {
@@ -423,12 +444,24 @@ document.documentElement.addEventListener("click", function (e) {
 		search_menu.classList.remove('active');
 	}
 });
+
+search_icon.addEventListener("click", function (e) {
+	search_icon.classList.toggle('active');
+});
+
+document.documentElement.addEventListener("click", function (e) {
+	if (!e.target.closest('.menu__item-search')) {
+		search_icon.classList.remove('active');
+	}
+});
 /***************** Menu-burger ********************/
 let menu_burger = document.querySelector('.menu__burger');
 let menu = document.querySelector('.menu');
+let menu_lock = document.querySelector('body');
 menu_burger.addEventListener("click", function (e) {
 	menu.classList.toggle('active');
 	menu_burger.classList.toggle('active');
+	menu_lock.classList.toggle('lock');
 });
 
 /***************** WebP ********************/

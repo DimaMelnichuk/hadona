@@ -35,14 +35,25 @@
 		@media (max-width: 1366px) {
 			margin: 0px 20px 0px 0px;
 		}
+
+		@media (max-width: 1060px) {
+			flex: 1 1 auto;
+		}
+
+		img {
+
+			@media (max-width: 480px) {
+				width: 100%;
+    			min-width: 100px;
+			}
+		}
 	}
 
 	&__basket {
 		position: relative;
 
-		@media (max-width: 1260px) {
-			position: absolute;
-			right: 50px;
+		@media (max-width: 1060px) {
+			margin-right: 50px;
 		}
 
 	}
