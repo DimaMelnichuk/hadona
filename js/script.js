@@ -231,6 +231,24 @@ $(function(){
 		dots: true,
 	});
 
+	$('.cart-detail__slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true,
+		dots: false,
+		asNavFor: '.cart-detail__box',
+	});
+
+	$('.cart-detail__box').slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: false,
+		asNavFor: '.cart-detail__slider',
+	});
+
+
+
 
    $(".cart__body-shuffle").click(function(event){
 		$(this).toggleClass("active");
@@ -248,11 +266,6 @@ $(function(){
 	$(".special-product__image").css("background-image",$(this).attr("data-pic"));
 	});
 
-	$('.wallet__cart-close').click(function() {
-		$("#wallet__cart_1").remove();
-	 });  
-
-
 	 /***************** Name ********************/
 	 $('.checkmark').on('click', function(event) {
 		if($(this).hasClass('active')){
@@ -264,8 +277,43 @@ $(function(){
 		return false;
 	});
 
+	/***************** Сounter ********************/
+	$('<div class="quantity-nav"><div class="quantity-button quantity-up"><img src="img/icons/plus.svg" alt=""></div><div class="quantity-button quantity-down"><img src="img/icons/minus.svg" alt=""></div></div>').insertAfter('.quantity input');
+	$('.quantity').each(function() {
+	  var spinner = $(this),
+		 input = spinner.find('input[type="number"]'),
+		 btnUp = spinner.find('.quantity-up'),
+		 btnDown = spinner.find('.quantity-down'),
+		 min = input.attr('min'),
+		 max = input.attr('max');
+
+	  btnUp.click(function() {
+		 var oldValue = parseFloat(input.val());
+		 if (oldValue >= max) {
+			var newVal = oldValue;
+		 } else {
+			var newVal = oldValue + 1;
+		 }
+		 spinner.find("input").val(newVal);
+		 spinner.find("input").trigger("change");
+	  });
+
+	  btnDown.click(function() {
+		 var oldValue = parseFloat(input.val());
+		 if (oldValue <= min) {
+			var newVal = oldValue;
+		 } else {
+			var newVal = oldValue - 1;
+		 }
+		 spinner.find("input").val(newVal);
+		 spinner.find("input").trigger("change");
+	  });
+
+	});
+
+
 /***************** polzunok ********************/
-$(".sidebar-price__polzunok-line").slider({
+/* $(".sidebar-price__polzunok-line").slider({
 	min: 0,
 	max: 5000,
 	values: [2000, 3000],
@@ -306,14 +354,39 @@ $(document).focusout(function() {
 	$(".sidebar-price__polzunok-input-l").val(input_left); 
 	$(".sidebar-price__polzunok-input-r").val(input_right); 
 	$(".sidebar-price__polzunok-line").slider( "values", [ input_left, input_right ] );
-});
+}); */
  
+	  /***************** Tab-menu ********************/
+	  $(".tabs__container:first").show()
+	  $(".tabs__nav li:first").addClass('active');
+  
+	 $(".tabs__nav li").click(function(event) {
+		index = $(this).index();
+		$(".tabs__nav li").removeClass('active');
+		$(this).addClass('active');
+		$('.tabs__container').hide();
+		$('.tabs__container').eq(index).show();
+	 });
+
+	 /***************** Add active for setting__currency-link ********************/
+	$('.setting__currency-link').click(function() {
+		$('.setting__currency-link').removeClass('active');
+		$(this).addClass('active')
+	});
+
+	/***************** Add active for  setting__lang-link ********************/
+	$('.setting__lang-link').click(function() {
+		$('.setting__lang-link').removeClass('active');
+		$(this).addClass('active')
+	});
+
 });
 
 
-
+/***************** Menu-wallet ********************/
 let wallet_icon = document.querySelector('.basket__wallet-icon');
 let wallet_menu = document.querySelector('.wallet');
+let wallet_lock = document.querySelector('body');
 wallet_icon.addEventListener("click", function (e) {
 	wallet_menu.classList.toggle('active');
 });
@@ -323,9 +396,20 @@ document.documentElement.addEventListener("click", function (e) {
 		wallet_menu.classList.remove('active');
 	}
 });
+
+wallet_icon.addEventListener("click", function (e) {
+	wallet_icon.classList.toggle('active');
+});
+
+document.documentElement.addEventListener("click", function (e) {
+	if (!e.target.closest('.basket__wallet')) {
+		wallet_icon.classList.remove('active');
+	}
+});
 /***************** Menu-setting ********************/
 let setting_icon = document.querySelector('.basket__setting-icon');
 let setting_menu = document.querySelector('.setting');
+let setting_lock = document.querySelector('body');
 setting_icon.addEventListener("click", function (e) {
 	setting_menu.classList.toggle('active');
 });
@@ -358,12 +442,24 @@ document.documentElement.addEventListener("click", function (e) {
 		search_menu.classList.remove('active');
 	}
 });
+
+search_icon.addEventListener("click", function (e) {
+	search_icon.classList.toggle('active');
+});
+
+document.documentElement.addEventListener("click", function (e) {
+	if (!e.target.closest('.menu__item-search')) {
+		search_icon.classList.remove('active');
+	}
+});
 /***************** Menu-burger ********************/
 let menu_burger = document.querySelector('.menu__burger');
 let menu = document.querySelector('.menu');
+let menu_lock = document.querySelector('body');
 menu_burger.addEventListener("click", function (e) {
 	menu.classList.toggle('active');
 	menu_burger.classList.toggle('active');
+	menu_lock.classList.toggle('lock');
 });
 
 /***************** WebP ********************/
@@ -395,6 +491,34 @@ function ibg(){
 	}
 }
 ibg();
+//Объявляем переменные
+const parent_original = document.querySelector('.menu__item-search');
+const parent = document.querySelector('.header__container');
+const item = document.querySelector('.content__block_item');
+
+//Слушаем изменение размера экрана
+window.addEventListener('resize', move);
+
+//Функция
+function move(){
+	const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+	if (viewport_width <= 1060) {
+		if (!item.classList.contains('done')) {
+			parent.insertBefore(item, parent.children[1]);
+			item.classList.add('done');
+		}
+	} else {
+		if (item.classList.contains('done')) {
+			parent_original.insertBefore(item, parent_original.children[0]);
+			item.classList.remove('done');
+		}
+	}
+}
+
+//Вызываем функцию
+move();
+
+
 $(function(){
 
    /***************** Accordion ********************/
@@ -407,7 +531,19 @@ $(function(){
    });
 
 });
-function getTimeRemaining(endtime) {
+const ratingItemList = document.querySelectorAll(".cart__rating-item");
+const ratingItemArray = Array.prototype.slice.call(ratingItemList);
+
+ratingItemArray.forEach(item => 
+	item.addEventListener('click', () => {
+		const { itemValue } = item.dataset;
+		item.parentNode.dataset.totalValue = itemValue;
+
+		// request itemValue
+	})
+	
+);
+/* function getTimeRemaining(endtime) {
 	var t = Date.parse(endtime) - Date.parse(new Date());
 	var seconds = Math.floor((t / 1000) % 60);
 	var minutes = Math.floor((t / 1000 / 60) % 60);
@@ -449,4 +585,4 @@ function getTimeRemaining(endtime) {
  var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
  initializeClock('countdown', deadline);
  var deadline_1 = new Date(Date.parse(new Date()) + 30 * 24 * 60 * 60 * 1000); // for endless timer
- initializeClock('countdown_1', deadline_1);
+ initializeClock('countdown_1', deadline_1); */
