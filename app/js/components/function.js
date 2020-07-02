@@ -412,7 +412,6 @@ let setting_menu = document.querySelector('.setting');
 let setting_lock = document.querySelector('body');
 setting_icon.addEventListener("click", function (e) {
 	setting_menu.classList.toggle('active');
-	setting_lock.classList.toggle('lock');
 });
 
 document.documentElement.addEventListener("click", function (e) {

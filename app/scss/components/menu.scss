@@ -69,6 +69,14 @@
 		}
 	}
 
+	&__item-search {
+		position: relative;
+		display: flex;
+
+
+
+	}
+
 	// .menu__link
 
 	&__link {
@@ -110,6 +118,22 @@
 	}
 
 	&__link-btn {
+
+		&::after {
+			position: absolute;
+			display: block;
+			content: "";
+			background-color: #ffffff;
+			opacity: 0.1;
+			height: 100%;
+			width: 1px;
+			right: 0;
+			top: 0;
+
+			@media (max-width: 1060px) {
+				display: none;
+			}
+		}
 
 		@media (max-width: 1060px) {
 			color: #888888;
