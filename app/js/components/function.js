@@ -389,7 +389,6 @@ let wallet_menu = document.querySelector('.wallet');
 let wallet_lock = document.querySelector('body');
 wallet_icon.addEventListener("click", function (e) {
 	wallet_menu.classList.toggle('active');
-	wallet_lock.classList.toggle('lock');
 });
 
 document.documentElement.addEventListener("click", function (e) {
