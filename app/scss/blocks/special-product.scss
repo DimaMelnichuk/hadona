@@ -167,6 +167,12 @@
 		font-size: 13px;
 		font-weight: 600;
 		text-transform: uppercase;
+		transition: color .3s, background-color .3s;
+
+		&:hover {
+			background-color: #ad0300;
+			color: #fff;
+		}
 	}
 
 	// .special-product__image

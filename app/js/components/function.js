@@ -8,6 +8,8 @@ $(function(){
 				breakpoint: 769,
 				settings: {
 				arrows: false,
+				autoplay: true,
+  				autoplaySpeed: 2000,
 				}
 			}
 			]
@@ -19,7 +21,7 @@ $(function(){
 		arrows: true,
 		responsive: [
 			{
-				breakpoint: 1200,
+				breakpoint: 1500,
 				settings: {
 					slidesToShow: 5,
 				}
@@ -41,6 +43,8 @@ $(function(){
 				settings: {
 					slidesToShow: 3,
 					arrows: false,
+					autoplay: true,
+					autoplaySpeed: 2000,
 				}
 			},
 			{
@@ -48,6 +52,8 @@ $(function(){
 				settings: {
 					slidesToShow: 2,
 					arrows: false,
+					autoplay: true,
+					autoplaySpeed: 2000,
 				}
 			},
 			{
@@ -55,6 +61,8 @@ $(function(){
 				settings: {
 					slidesToShow: 1,
 					arrows: false,
+					autoplay: true,
+					autoplaySpeed: 2000,
 				}
 			},
 			]

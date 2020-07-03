@@ -16,11 +16,6 @@
 	@media (max-width: 550px) {
 		padding: 30px 0px;
 	}
-	
-	// .featured__main-title
-
-	&__main-title {
-	}
 
 	// .featured__slider
 
@@ -31,11 +26,8 @@
 	// .featured__slider-item
 
 	&__slider-item{
-		padding: 0px 15px;
+		padding: 10px 15px 0 15px;
 	}
 	// .featured__cart
 
-	&__cart {
-
-	}
 }

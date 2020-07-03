@@ -126,6 +126,8 @@
 
 	&__column:last-child {
 		.policy__item {
+			padding: 0;
+
 			&::after {
 				content: none;
 			}
@@ -152,6 +154,7 @@
 	&__item-image {
 		display: inline-block;
 		width: 100%;
+		min-width: 50px;
 		max-width: 50px;
 		height: 50px;
 		line-height: 50px;
