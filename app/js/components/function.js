@@ -1,5 +1,6 @@
 $(function(){
 
+	/***************** main-slider ********************/
 	$('.main-slider').slick({
 		arrows: true,
 		dots: true,
@@ -15,6 +16,7 @@ $(function(){
 			]
 	});
 
+	/***************** featured__slider ********************/
 	$('.featured__slider').slick({
 		slidesToShow: 6,
 		slidesToScroll: 1,
@@ -68,7 +70,7 @@ $(function(){
 			]
 	});
 	
-
+	/***************** testimonials__slider ********************/
 	$('.testimonials__slider').slick({
 		arrows: false,
 		dots: true,
@@ -82,7 +84,7 @@ $(function(){
 				}
 			},
 			{
-				breakpoint: 769,
+				breakpoint: 801,
 				settings: {
 					slidesToShow: 1,
 				}

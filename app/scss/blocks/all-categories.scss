@@ -51,13 +51,6 @@
 
 		}
 	}
-
-	// .all-categories__item
-
-	&__item {
-
-	}
-
 	// .all-categories__img
 
 	&__img {
@@ -80,6 +73,10 @@
 
 			@media (max-width: 1366px) {
 				padding: 0 0 42.7% 0;
+			}
+
+			@media (max-width: 550px) {
+				padding: 0 0 60% 0;
 			}
 		}
 
