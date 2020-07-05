@@ -12,6 +12,11 @@
 		padding: 20px 0px;
 		border-bottom: 1px solid rgba(#000000, .2);
 
+		@media (max-width: 1400px) {
+			margin: 0 20px 10px 20px;
+			padding: 20px 0px 15px;
+		}
+
 		&--light {
 			color: #ffffff;
 		}
@@ -74,6 +79,10 @@
 		font-weight: 400;
 		font-size: 13px;
 		transition: color .3s ease, transform .3s ease;
+
+		@media (max-width: 1400px) {
+			padding: 10px 20px;
+		}
 
 		&--light {
 			color: #ffffff;
@@ -151,6 +160,11 @@
 		display: block;
 		padding: 12px 0px;
 		transition: color .3s ease, transform .3s ease;
+
+		@media (max-width: 1400px) {
+			padding: 10px 0;
+		}
+
 
 		&:hover {
 			color: #e12121;

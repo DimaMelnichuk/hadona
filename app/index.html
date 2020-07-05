@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-	@@include('_head.html',{
+	@@include('blocks/_head.html',{
 		"title":"Home"
 	})
 <body>
 
 	<div class="wrapper">
-	@@include('_header.html')
+	@@include('blocks/_header.html')
 		<main class="page">
 			<div class="container">
 				<!-- main-slider -->
@@ -113,7 +113,7 @@
 
 					<div class="featured__slider">
 						<div class="featured__slider-item">
-							@@include('_cart.html',{
+							@@include('blocks/_cart.html',{
 								"class__cart":"featured__cart"
 							})
 						</div>
@@ -717,9 +717,9 @@
 				<!-- news end -->
 			</div>
 		</main>
-		@@include('_footer.html')
+		@@include('blocks/_footer.html')
 	</div>
 
-	@@include('_js.html')
+	@@include('blocks/_js.html')
 </body>
 </html>

@@ -22,6 +22,11 @@
 		font-weight: 800;
 		margin: 0px 0px 17px 0px;
 		display: inline-block;
+		transition: color .3s;
+
+		&:hover {
+			color: #e12121;
+		}
 
 		span {
 			color: #888888;
@@ -35,8 +40,15 @@
 		color: #888888;
 		font-size: 13px;
 		font-weight: 400;
-		line-height: 22px;
 		margin: 0px 0px 17px 0px;
+
+		line-height: 22px;
+		width: 100%;
+		height: calc(22px * 3);
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
 	}
 
 	// .sidebar-news__item-btn
@@ -50,5 +62,11 @@
 		border-radius: 20px;
 		border: 1px solid #dddddd;
 		background-color: #ffffff;
+		transition: background-color .3s, color .3s;
+
+		&:hover {
+			background-color: #e12121;
+			color: #fff;
+		}
 	}
 }

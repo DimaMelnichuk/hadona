@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-	@@include('_head.html',{
+	@@include('blocks/_head.html',{
 		"title":"Blog col"
 	})
 <body>
 
 	<div class="wrapper">
-	@@include('_header.html')
+	@@include('blocks/_header.html')
 		<main class="page">
-			@@include('_page-policy.html')
+			@@include('blocks/_page-policy.html')
 			<!-- breadcrumbs -->
 			<div class="breadcrumbs">
 				<div class="container">
@@ -377,7 +377,7 @@
 						<div class="detail__sidebar">
 
 							<!-- sidebar-block -->
-							@@include('_sidebar-block.html',{
+							@@include('blocks/_sidebar-block.html',{
 								"sidebar-block__class":"detail__content-block",
 								"sidebar-block__img":"img/newsletter/bg.jpg",
 								"sidebar-block__alt":"img",
@@ -386,7 +386,7 @@
 							<!-- sidebar-block end -->
 
 							<!-- sidebar-new -->
-							@@include('_sidebar-new.html',{
+							@@include('blocks/_sidebar-new.html',{
 								"sidebar-new__class":"detail__content-new",
 								"sidebar-new__title":"Upsell products",
 								"sidebar-new__img-1":"img/cart/04.jpg",
@@ -398,7 +398,7 @@
 							<!-- sidebar-new end -->
 
 							<!-- sidebar-new -->
-							@@include('_sidebar-new.html',{
+							@@include('blocks/_sidebar-new.html',{
 								"sidebar-new__class":"detail__content-new",
 								"sidebar-new__title":"YOU MAY ALSO LIKE…",
 								"sidebar-new__img-1":"img/cart/04.jpg",
@@ -417,9 +417,9 @@
 			</div>
 			<!-- detail end -->
 		</main>
-		@@include('_footer.html')
+		@@include('blocks/_footer.html')
 	</div>
 
-	@@include('_js.html')
+	@@include('blocks/_js.html')
 </body>
 </html>
