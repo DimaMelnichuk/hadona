@@ -7,5 +7,9 @@
 		width: 100%;
 		object-position: center;
 		object-fit: cover;
+
+		@media (max-width: 1400px) {
+			height: 350px;
+		}
 	}
 }

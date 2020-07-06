@@ -16,8 +16,8 @@ $(function(){
 			]
 	});
 
-	/***************** featured__slider ********************/
-	$('.featured__slider').slick({
+	/***************** featured__slider big ********************/
+	$('.featured__slider--b').slick({
 		slidesToShow: 6,
 		slidesToScroll: 1,
 		arrows: true,
@@ -38,6 +38,60 @@ $(function(){
 				breakpoint: 900,
 				settings: {
 					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 769,
+				settings: {
+					slidesToShow: 3,
+					arrows: false,
+					autoplay: true,
+					autoplaySpeed: 2000,
+				}
+			},
+			{
+				breakpoint: 700,
+				settings: {
+					slidesToShow: 2,
+					arrows: false,
+					autoplay: true,
+					autoplaySpeed: 2000,
+				}
+			},
+			{
+				breakpoint: 500,
+				settings: {
+					slidesToShow: 1,
+					arrows: false,
+					autoplay: true,
+					autoplaySpeed: 2000,
+				}
+			},
+			]
+	});
+
+	/***************** featured__slider small ********************/
+	$('.featured__slider--sm').slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		arrows: true,
+		responsive: [
+			{
+				breakpoint: 1500,
+				settings: {
+					slidesToShow: 4,
+				}
+			},
+			{
+				breakpoint: 1165,
+				settings: {
+					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 950,
+				settings: {
+					slidesToShow: 2,
 				}
 			},
 			{
@@ -121,20 +175,20 @@ $(function(){
 	});
 
 	$('.featured-product__slider').slick({
-		slidesToShow: 5,
+		slidesToShow: 6,
 		slidesToScroll: 1,
 		arrows: true,
 		responsive: [
 			{
 				breakpoint: 1480,
 				settings: {
-					slidesToShow: 4,
+					slidesToShow: 5,
 				}
 			},
 			{
 				breakpoint: 1100,
 				settings: {
-					slidesToShow: 3,
+					slidesToShow: 4,
 				}
 			},
 			{
