@@ -312,8 +312,6 @@ $(function(){
 	});
 
 
-
-
    $(".cart__body-shuffle").click(function(event){
 		$(this).toggleClass("active");
 	});
@@ -342,7 +340,7 @@ $(function(){
 	});
 
 	/***************** Сounter ********************/
-	$('<div class="quantity-nav"><div class="quantity-button quantity-up"><img src="img/icons/plus.svg" alt=""></div><div class="quantity-button quantity-down"><img src="img/icons/minus.svg" alt=""></div></div>').insertAfter('.quantity input');
+	$('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
 	$('.quantity').each(function() {
 	  var spinner = $(this),
 		 input = spinner.find('input[type="number"]'),
