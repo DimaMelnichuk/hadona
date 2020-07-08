@@ -1,16 +1,10 @@
 .sidebar-tags {
 
-	// .sidebar-tags__title
-
-	&__title {
-	}
-
 	// .sidebar-tags__list
 
 	&__list {
 		display: flex;
 		flex-flow: row wrap;
-		margin: 0px 0px 50px 0px;
 	}
 
 	// .sidebar-tags__item

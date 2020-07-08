@@ -1,8 +1,16 @@
 .shop-col {
 	padding: 50px 0px 90px;
 
-	@media (max-width: 768px) {
-		padding: 20px 0 20px;
+	@media (max-width: 1366px) {
+		padding: 30px 0px 60px;
+	}
+
+	@media (max-width: 1000px) {
+		padding: 30px 0px 30px;
+	}
+
+	@media (max-width: 480px) {
+		padding: 20px 0px 20px;
 	}
 	// .shop-col__body
 
@@ -10,7 +18,7 @@
 		display: flex;
 		margin: 0px -15px;
 
-		@media (max-width: 768px) {
+		@media (max-width: 1000px) {
 			flex-direction: column;
 		}
 	}
@@ -24,16 +32,10 @@
 		display: flex;
 		flex-direction: column;
 		
-		
-		@media (max-width: 768px) {
-			margin: 50px 0px 0px 0px;
+		@media (max-width: 1000px) {
 			flex-flow: row wrap;
 			justify-content: space-between;
 			order: 2;
-
-			&>div {
-				flex: 0 1 48%;
-			}
 		}
 
 		@media (max-width: 560px) {
@@ -43,23 +45,21 @@
 
 	&__sidebar-nav,
 	&__sidebar-block,
-	&__sidebar-news {
+	&__sidebar-news,
+	&__sidebar-new {
 		margin: 0px 0px 50px 0px;
 
-		@media (max-width: 768px) {
-			margin: 0px 0px 30px 0px;
+		@media (max-width: 1400px) {
+			margin: 0px 0px 40px 0px;
 		}
 
-		@media (max-width: 400px) {
-			margin: 0px 0px 15px 0px;
+		@media (max-width: 1000px) {
+			flex: 0 1 48%;
+			margin: 0 0 30px 0;
 		}
-	}
 
-	&__sidebar-new {
-		margin: 0px 0px 30px 0px;
-
-		@media (max-width: 400px) {
-			margin: 0px 0px 15px 0px;
+		@media (max-width: 480px) {
+			margin: 0 0 20px 0;
 		}
 	}
 
@@ -82,9 +82,20 @@
 	&__content-product,
 	&__content-sponsor,
 	&__content-featured,
-	&__content-information,
-	&__sidebar-news {
+	&__content-information {
 		margin: 0px 0px 50px 0px;
+
+		@media (max-width: 1400px) {
+			margin: 0px 0px 40px 0px;
+		}
+
+		@media (max-width: 1000px) {
+			margin: 0 0 30px 0;
+		}
+
+		@media (max-width: 480px) {
+			margin: 0 0 20px 0;
+		}
 	}
 	
 	&__content-popular {
