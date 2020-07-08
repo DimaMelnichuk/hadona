@@ -3,7 +3,6 @@
 
 	&__item {
 		display: flex;
-		margin: 0px 0px 20px 0px;
 
 		&:hover {
 			.sidebar-new__item-title {
@@ -16,6 +15,14 @@
 		}
 	}
 
+	&__link {
+		display: block;
+		margin: 0px 0px 20px 0px;
+
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+	}
 	// .sidebar-new__item-img
 
 	&__item-img {
