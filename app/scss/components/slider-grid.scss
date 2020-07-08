@@ -1,18 +1,15 @@
 .slider-grid {
 
-	
-	// .slider-grid__item
-
-	&__item {
-	
-	}
-
 	// .slider-grid__item-img
 
 	&__item-img {
 		padding: 0px 0px 25.2% 0px;
 		overflow: hidden;
 		position: relative;
+
+		@media (max-width: 600px) {
+			padding: 0px 0px 35% 0px;
+		}
 
 		img {
 			width: 100%;

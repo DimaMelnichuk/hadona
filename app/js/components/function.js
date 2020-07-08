@@ -299,6 +299,16 @@ $(function(){
 		slidesToScroll: 1,
 		arrows: false,
 		dots: true,
+		responsive: [
+			{
+				breakpoint: 769,
+				settings: {
+					dots: false,
+					autoplay: true,
+					autoplaySpeed: 2000,
+				}
+			}
+			]
 	});
 
 	$('.cart-detail__slider').slick({
@@ -334,7 +344,7 @@ $(function(){
 	$(".special-product__image").css("background-image",$(this).attr("data-pic"));
 	});
 
-	 /***************** Name ********************/
+	 /***************** checkmark ********************/
 	 $('.checkmark').on('click', function(event) {
 		if($(this).hasClass('active')){
 			$(this).find('input').prop('checked',false);
