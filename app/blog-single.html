@@ -245,16 +245,13 @@
 						<div class="blog-list__sidebar">
 
 							<!-- sidebar-search -->
-							<div class="sidebar-search">
-								<form action="#" class="sidebar-search__form">
-									<input class="sidebar-search__form-text" type="text" placeholder="Search" required>
-									<button class="sidebar-search__form-btn btn"><i class="icon-search"></i></button>
-								</form>
-							</div>
+							@@include('blocks/_sidebar-search.html',{
+								"sidebar-search__class":"blog-list__sidebar-search"
+							})
 							<!-- sidebar-search end -->
 
 							<!-- sidebar-categories -->
-							<div class="sidebar-categories">
+							<div class="blog-list__sidebar-categories sidebar-categories">
 								<div class="sidebar-categories__title sidebar__title">Categories</div>
 								<ul class="sidebar-categories__list">
 									<li class="sidebar-categories__item"><a href="#" class="sidebar-categories__link">Fashion</a></li>
@@ -267,7 +264,7 @@
 							<!-- sidebar-categories end -->
 
 							<!-- sidebar-post -->
-							<div class="sidebar-post">
+							<div class="blog-list__sidebar-post sidebar-post">
 								<div class="sidebar-post__title sidebar__title">Latest post</div>
 								<a href="#"> 
 									<div class="sidebar-post__item">
@@ -328,30 +325,17 @@
 							<!-- sidebar-post end -->
 
 							<!-- sidebar-tags -->
-							<div class="sidebar-tags">
-								<div class="sidebar-tags__title sidebar__title">Popular tags</div>
-								<ul class="sidebar-tags__list">
-									<li class="sidebar-tags__item"><a href="#" class="sidebar-tags__link">Shopping</a></li>
-									<li class="sidebar-tags__item"><a href="#" class="sidebar-tags__link">Coffee maker</a></li>
-									<li class="sidebar-tags__item"><a href="#" class="sidebar-tags__link">Coffee</a></li>
-									<li class="sidebar-tags__item"><a href="#" class="sidebar-tags__link">Wordpress</a></li>
-									<li class="sidebar-tags__item"><a href="#" class="sidebar-tags__link">Responsive</a></li>
-									<li class="sidebar-tags__item"><a href="#" class="sidebar-tags__link">Shoping online</a></li>
-									<li class="sidebar-tags__item"><a href="#" class="sidebar-tags__link">Work</a></li>
-									<li class="sidebar-tags__item"><a href="#" class="sidebar-tags__link">Design</a></li>
-									<li class="sidebar-tags__item"><a href="#" class="sidebar-tags__link">Coffee</a></li>
-									<li class="sidebar-tags__item"><a href="#" class="sidebar-tags__link">Bestsalers</a></li>
-									<li class="sidebar-tags__item"><a href="#" class="sidebar-tags__link">Most wanted</a></li>
-								</ul>
-							</div>
+							@@include('blocks/_sidebar-tags.html',{
+								"sidebar-tags__class":"blog-list__sidebar-tags"
+							})
 							<!-- sidebar-tags end -->
 
 							<!-- sidebar-block -->
-							<div class="sidebar-block">
-								<div class="sidebar-block__img">
-									<img src="img/newsletter/bg.jpg" alt="">
-								</div>
-							</div>
+							@@include('blocks/_sidebar-block.html',{
+								"sidebar-block__class":"blog-list__sidebar-block",
+								"sidebar-block__link":"#",
+								"sidebar-block__img":"img/newsletter/bg.jpg"
+							})
 							<!-- sidebar-block end -->
 
 						</div>
