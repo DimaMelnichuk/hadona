@@ -4,6 +4,10 @@
 
 	&__title {
 		margin: 0px 0px 30px 0px;
+
+		@media (max-width: 768px) {
+			margin: 0px 0px 20px 0px;
+		}
 	}
 
 	// .leave-comment__warning
@@ -13,6 +17,10 @@
 		font-size: 13px;
 		font-weight: 400;
 		margin: 0px 0px 30px 0px;
+
+		@media (max-width: 768px) {
+			margin: 0px 0px 20px 0px;
+		}
 	}
 
 	// .leave-comment__row
@@ -59,7 +67,7 @@
 		color: #888888;
 		font-size: 13px;
 		font-weight: 400;
-		line-height: 29px;
+		line-height: 25px;
 
 		span {
 			color: #e12121;
@@ -71,14 +79,33 @@
 	&__form-message {
 		margin: 0px 0px 30px 0px;
 		height: 132px;
+
+		@media (max-width: 768px) {
+			margin: 0px 0px 10px 0px;
+		}
+	}
+
+	&__form-phone {
+
+		@media (max-width: 600px) {
+			margin: 0px 0px 10px 0px;
+		}
 	}
 
 	&__form-name {
 		margin: 0px 0px 20px 0px;
+
+		@media (max-width: 768px) {
+			margin: 0px 0px 10px 0px;
+		}
 	}
 
 	&__form-email {
 		margin: 0px 0px 20px 0px;
+
+		@media (max-width: 768px) {
+			margin: 0px 0px 10px 0px;
+		}
 	}
 
 	// .leave-comment__form-btn
