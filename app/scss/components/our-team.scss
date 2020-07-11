@@ -87,7 +87,8 @@
 
 	&__name {
 		font-size: 13px;
-		font-weight: 400;
+		font-weight: 900;
+		text-transform: capitalize;
 		color: #333333;
 		margin: 0px 0px 25px 0px;
 
@@ -96,6 +97,7 @@
 		}
 
 		span {
+			font-weight: 400;
 			color: #888888;
 		}
 	}
