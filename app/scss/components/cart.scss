@@ -248,11 +248,11 @@
 
 	&__body-like {
 		cursor: pointer;
-		margin: -3px 0px 0px 20px;
+		margin: -1px 0px 0px 20px;
 		color: #aaaaaa;
 
 		@media (max-width: 1366px) {
-			margin: -3px 0px 0px 10px;
+			margin: -1px 0px 0px 10px;
 		}
 
 		&.active {
