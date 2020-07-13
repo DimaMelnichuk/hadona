@@ -82,13 +82,15 @@
 			color: #e12020;
 			text-transform: uppercase;
 			font-weight: 600;
-			padding: 0px 0px 0px 7px;
+			margin: 0px 7px 0px 0px;
+			padding: 0px 0px 0px 14px;
 
 			&::before {
 				content: "";
 				position: absolute;
 				height: 13px;
 				width: 1px;
+				margin: 0px 0px 0px 7px;
 				background: #888888;
 				left: 0;
 				top: 3px;
