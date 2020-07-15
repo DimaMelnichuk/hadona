@@ -1,5 +1,6 @@
 $(function(){
 
+	/***************** main-slider ********************/
 	$('.main-slider').slick({
 		arrows: true,
 		dots: true,
@@ -8,18 +9,21 @@ $(function(){
 				breakpoint: 769,
 				settings: {
 				arrows: false,
+				autoplay: true,
+  				autoplaySpeed: 2000,
 				}
 			}
 			]
 	});
 
-	$('.featured__slider').slick({
+	/***************** featured__slider big ********************/
+	$('.featured__slider--b').slick({
 		slidesToShow: 6,
 		slidesToScroll: 1,
 		arrows: true,
 		responsive: [
 			{
-				breakpoint: 1200,
+				breakpoint: 1500,
 				settings: {
 					slidesToShow: 5,
 				}
@@ -41,6 +45,8 @@ $(function(){
 				settings: {
 					slidesToShow: 3,
 					arrows: false,
+					autoplay: true,
+					autoplaySpeed: 2000,
 				}
 			},
 			{
@@ -48,6 +54,8 @@ $(function(){
 				settings: {
 					slidesToShow: 2,
 					arrows: false,
+					autoplay: true,
+					autoplaySpeed: 2000,
 				}
 			},
 			{
@@ -55,12 +63,74 @@ $(function(){
 				settings: {
 					slidesToShow: 1,
 					arrows: false,
+					autoplay: true,
+					autoplaySpeed: 2000,
+				}
+			},
+			]
+	});
+
+	/***************** featured__slider small ********************/
+	$('.featured__slider--sm').slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		arrows: true,
+		responsive: [
+			{
+				breakpoint: 1500,
+				settings: {
+					slidesToShow: 4,
+				}
+			},
+			{
+				breakpoint: 1165,
+				settings: {
+					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 1000,
+				settings: {
+					slidesToShow: 4,
+				}
+			},
+			{
+				breakpoint: 900,
+				settings: {
+					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 769,
+				settings: {
+					slidesToShow: 3,
+					arrows: false,
+					autoplay: true,
+					autoplaySpeed: 2000,
+				}
+			},
+			{
+				breakpoint: 700,
+				settings: {
+					slidesToShow: 2,
+					arrows: false,
+					autoplay: true,
+					autoplaySpeed: 2000,
+				}
+			},
+			{
+				breakpoint: 500,
+				settings: {
+					slidesToShow: 1,
+					arrows: false,
+					autoplay: true,
+					autoplaySpeed: 2000,
 				}
 			},
 			]
 	});
 	
-
+	/***************** testimonials__slider ********************/
 	$('.testimonials__slider').slick({
 		arrows: false,
 		dots: true,
@@ -74,7 +144,7 @@ $(function(){
 				}
 			},
 			{
-				breakpoint: 769,
+				breakpoint: 801,
 				settings: {
 					slidesToShow: 1,
 				}
@@ -88,7 +158,7 @@ $(function(){
 		slidesToScroll: 1,
 		responsive: [
 			{
-				breakpoint: 1000,
+				breakpoint: 900,
 				settings: {
 					slidesToShow: 2,
 				}
@@ -111,20 +181,20 @@ $(function(){
 	});
 
 	$('.featured-product__slider').slick({
-		slidesToShow: 5,
+		slidesToShow: 6,
 		slidesToScroll: 1,
 		arrows: true,
 		responsive: [
 			{
 				breakpoint: 1480,
 				settings: {
-					slidesToShow: 4,
+					slidesToShow: 5,
 				}
 			},
 			{
 				breakpoint: 1100,
 				settings: {
-					slidesToShow: 3,
+					slidesToShow: 4,
 				}
 			},
 			{
@@ -229,6 +299,16 @@ $(function(){
 		slidesToScroll: 1,
 		arrows: false,
 		dots: true,
+		responsive: [
+			{
+				breakpoint: 769,
+				settings: {
+					dots: false,
+					autoplay: true,
+					autoplaySpeed: 2000,
+				}
+			}
+			]
 	});
 
 	$('.cart-detail__slider').slick({
@@ -248,8 +328,6 @@ $(function(){
 	});
 
 
-
-
    $(".cart__body-shuffle").click(function(event){
 		$(this).toggleClass("active");
 	});
@@ -266,7 +344,7 @@ $(function(){
 	$(".special-product__image").css("background-image",$(this).attr("data-pic"));
 	});
 
-	 /***************** Name ********************/
+	 /***************** checkmark ********************/
 	 $('.checkmark').on('click', function(event) {
 		if($(this).hasClass('active')){
 			$(this).find('input').prop('checked',false);
@@ -278,7 +356,7 @@ $(function(){
 	});
 
 	/***************** Сounter ********************/
-	$('<div class="quantity-nav"><div class="quantity-button quantity-up"><img src="img/icons/plus.svg" alt=""></div><div class="quantity-button quantity-down"><img src="img/icons/minus.svg" alt=""></div></div>').insertAfter('.quantity input');
+	$('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
 	$('.quantity').each(function() {
 	  var spinner = $(this),
 		 input = spinner.find('input[type="number"]'),
@@ -543,7 +621,7 @@ ratingItemArray.forEach(item =>
 	})
 	
 );
-/* function getTimeRemaining(endtime) {
+function getTimeRemaining(endtime) {
 	var t = Date.parse(endtime) - Date.parse(new Date());
 	var seconds = Math.floor((t / 1000) % 60);
 	var minutes = Math.floor((t / 1000 / 60) % 60);
@@ -585,4 +663,62 @@ ratingItemArray.forEach(item =>
  var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
  initializeClock('countdown', deadline);
  var deadline_1 = new Date(Date.parse(new Date()) + 30 * 24 * 60 * 60 * 1000); // for endless timer
- initializeClock('countdown_1', deadline_1); */
+ initializeClock('countdown_1', deadline_1);
+const colors = document.querySelectorAll('.cart-detail__colors-color');
+const shoes = document.querySelectorAll('.cart-detail__img');
+
+let prevColor = "blue";
+let animationEnd = true;
+
+function changeSize(){
+    sizes.forEach(size => size.classList.remove('active'));
+    this.classList.add('active');
+}
+
+
+function changeColor(){
+    if(!animationEnd) return;
+	 let primary = this.getAttribute('primary');
+	 let color = this.getAttribute('color');
+	 let shoe = document.querySelector(`.card__img[color="${color}"]`);
+
+    if(color == prevColor) return;
+
+    colors.forEach(c => c.classList.remove('active'));
+    this.classList.add('active');
+
+    document.documentElement.style.setProperty('--primary', primary);
+    
+    shoes.forEach(s => s.classList.remove('show'));
+    shoe.classList.add('show');
+
+    gradients.forEach(g => g.classList.remove('first', 'second'));
+    gradient.classList.add('first');
+    prevGradient.classList.add('second');
+
+    prevColor = color;
+    animationEnd = false;
+
+    gradient.addEventListener('animationend', () => {
+        animationEnd = true;
+    })
+}
+
+sizes.forEach(size => size.addEventListener('click', changeSize));
+colors.forEach(c => c.addEventListener('click', changeColor));
+
+let x = window.matchMedia("(max-width: 1000px)");
+
+function changeHeight(){
+    if(x.matches){
+        let shoeHeight = shoes[0].offsetHeight;
+        shoeBg.style.height = `${shoeHeight * 0.9}px`;
+    }
+    else{
+        shoeBg.style.height = "475px";
+    }
+}
+
+changeHeight();
+
+window.addEventListener('resize', changeHeight);
