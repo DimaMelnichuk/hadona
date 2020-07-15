@@ -273,8 +273,16 @@
 			height: 615px;
 			width: 100%;
 
+			@media (max-width: 1000px) {
+				height: 420px;
+			}
+
 			@media (max-width: 1366px) {
 				height: 500px;
+			}
+
+			@media (max-width: 400px) {
+				height: 390px;
 			}
 		}
 	}

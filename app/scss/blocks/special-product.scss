@@ -107,16 +107,18 @@
 		}
 
 		span {
+			display: block;
 			color: #333333;
-			line-height: 30px;
+			margin: 0px 0px 12px 0px;
 			text-transform: uppercase;
 		}
 
 		li {
 			position: relative;
 			font-size: 13px;
-			line-height: 30px;
+			line-height: 15px;
 			padding: 0px 0px 0px 10px;
+			margin: 0px 0px 12px 0px;
 
 			&::before {
 				display: inline-block;
@@ -129,6 +131,10 @@
 				height: 5px;
 				border-radius: 50%;
 				background-color: #888888;
+			}
+
+			&:last-child {
+				margin: 0px 0px 0px 0px;
 			}
 		}
 	}

@@ -20,6 +20,7 @@
 
 		@media (max-width: 1000px) {
 			flex-direction: column;
+			margin: 0px 0px;
 		}
 	}
 
@@ -30,16 +31,25 @@
 		padding: 0px 15px;
 		display: flex;
 		flex-direction: column;
+
+		@media (max-width: 1000px) {
+			padding: 0px 0px;
+		}
 	}
 
-/* ==========================================================================
-  for blog-col
-========================================================================== */
 	&__row {
 		position: relative;
 		display: flex;
 		flex-flow: row wrap;
 		margin: -25px -15px;
+
+		@media (max-width: 1000px) {
+			margin: -15px -15px;
+		}
+
+		@media (max-width: 768px) {
+			margin: -10px -10px;
+		}
 
 		&::after {
 			content: "";
@@ -86,137 +96,25 @@
 		flex: 0 1 50%;
 		padding: 25px 15px;
 
-		@media (max-width: 768px) {
+		@media (max-width: 1000px) {
 			padding: 15px 15px;
+		}
+
+		@media (max-width: 768px) {
+			padding: 10px 10px;
 		}
 
 		@media (max-width: 600px) {
 			flex: 0 1 100%;
 		}
-
-		.blog-list__item-body,
-		.blog-list__item-descr {
-			padding: 0;
-		}
-
-		.blog-list__item-body {
-			margin: 0;
-		}
-
-		.blog-list__item-title {
-			margin: 0 0 15px 0;
-
-			@media (max-width: 1000px) {
-				font-size: 18px;
-				line-height: 20px;
-				margin: 0 0 10px 0;
-			}
-		}
-
-		.blog-list__item-descr {
-
-			@media (max-width: 1000px) {
-				margin: 0 0 15px 0;
-			}
-		}
-
-		.blog-list__item-date {
-			margin: 0 0 20px 0;
-
-			@media (max-width: 1000px) {
-				margin: 0 0 10px 0;
-			}
-		}
-
-		.blog-list__item-img {
-			height: 0px;
-			padding: 0 0 65% 0px;
-
-			@media (max-width: 1366px) {
-				padding: 0 0 55% 0px;
-				margin: 0px 0px 20px 0px;
-			}
-
-			@media (max-width: 1000px) {
-				padding: 0 0 55% 0px;
-				margin: 0px 0px 10px 0px;
-			}
-		}
-		
-		.blog-list__item {
-			flex-direction: column;
-			margin: 0px 0px 0px 0px;
-			padding: 0px 0px 0px 0px;
-
-			&::after {
-				display: none;
-			}
-		}
 		
 	}
-/* ==========================================================================
-  for blog-col end
-========================================================================== */
-/* ==========================================================================
-  for blog-default
-========================================================================== */
-.blog-list__row-default {
-
-	.blog-list__column {
-		flex: 0 1 100%;
-	}
-
-	.blog-list__item-img {
-		padding: 0 0 50% 0px;
-
-		@media (max-width: 1366px) {
-			padding: 0 0 40% 0px;
-		}
-
-		@media (max-width: 768px) {
-			padding: 0 0 50% 0px;
-		}
-
-		@media (max-width: 500px) {
-			padding: 0 0 60% 0px;
-		}
-	}
-
-}
-
-/* ==========================================================================
-  for blog-default end
-========================================================================== */
 	// .blog-list__item
 
 	&__item {
 		position: relative;
 		display: flex;
-		margin: 0px 0px 50px 0px;
-		padding: 0px 0px 50px 0px;
-
-
-		@media (max-width: 1100px) {
-			flex-direction: column;
-			margin: 0px 0px 40px 0px;
-			padding: 0px 0px 40px 0px;
-		}
-
-		@media (max-width: 768px) {
-			margin: 0px 0px 30px 0px;
-			padding: 0px 0px 30px 0px;
-		}
-		
-		&::after {
-			content: "";
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			width: 100%;
-			height: 1px;
-			background: #dddddd;
-		}
-
+		flex-direction: column;
 	}
 
 	// .blog-list__item-img
@@ -224,18 +122,27 @@
 	&__item-img {
 		flex: 0 0 48%;
     	position: relative;
-		height: 435px;
-		padding: 0 0 50% 0;
+		padding: 0 0 65% 0px;
 		margin: 0px 0px 30px 0px;
+
+		@media (max-width: 1366px) {
+			padding: 0 0 55% 0px;
+			margin: 0px 0px 20px 0px;
+		}
+
+		@media (max-width: 1000px) {
+			padding: 0 0 55% 0px;
+			margin: 0px 0px 10px 0px;
+		}
 	 
-	 img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		position: absolute;
-		top: 0;
-		left: 0;
-	 }
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
 	}
 
 	// .blog-list__item-body
@@ -244,11 +151,6 @@
 		display: flex;
 		flex-direction: column;
 		flex: 1 1 auto;
-		padding: 0px 0px 0px 30px;
-		 
-		 @media (max-width: 1100px) {
-			padding: 0 0 0 0;
-		 }
 	}
 
 	// .blog-list__item-title
@@ -258,17 +160,38 @@
 		font-size: 20px;
 		font-weight: 800;
 		line-height: 22px;
-		margin: 0px 0px 20px 0px;
+		margin: 0 0 15px 0;
 		transition: color .3s;
+
+		@media (max-width: 1000px) {
+			font-size: 18px;
+			line-height: 20px;
+			margin: 0 0 10px 0;
+		}
 
 		&:hover {
 			color: #e12121;
 		}
 
 		span {
+			position: relative;
 			color: #888888;
 			font-size: 13px;
 			font-weight: 600;
+			margin: 0px 7px 0px 0px;
+			padding: 0px 0px 0px 14px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				height: 13px;
+				width: 2px;
+				margin: 0px 0px 0px 7px;
+				background: #888888;
+				left: 0;
+				top: 3px;
+				transition: background .3s;
+			}
 		}
 	}
 
@@ -277,8 +200,33 @@
 	&__item-date {
 		color: #888888;
 		font-size: 13px;
-		line-height: 22px;
-		margin: 0px 0px 30px 0px;
+		margin: 0 0px 20px 0;
+
+		span {
+			position: relative;
+			margin: 0px 7px 0px 0px;
+			padding: 0px 0px 0px 14px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				height: 12px;
+				width: 1px;
+				margin: 0px 0px 0px 7px;
+				background: #888888;
+				left: 0;
+				top: 3px;
+				transition: background .3s;
+			}
+		}
+
+		@media (max-width: 1366px) {
+			margin: 0 0 15px 0;
+		}
+
+		@media (max-width: 1000px) {
+			margin: 0 0 10px 0;
+		}
 
 		a {
 			color: #888888;
@@ -290,6 +238,16 @@
 		}
 	}
 
+	&__item-tag {
+		text-transform: capitalize;
+
+		&:not(:last-child) {
+			margin: 0px 5px 0px 0px;
+		}
+	}
+	
+
+
 	// .blog-list__item-descr
 
 	&__item-descr {
@@ -298,11 +256,16 @@
 		font-weight: 400;
 		line-height: 25px;
 		margin: 0px 0px 25px 0px;
-		padding: 0px 45px 0px 0px;
+		width: 100%;
+		height: calc(25px * 3);
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
 
-		@media (max-width: 1100px) {
-			padding: 0 0 0 0;
-		 }
+		@media (max-width: 1000px) {
+			margin: 0 0 15px 0;
+		}
 	}
 
 	// .blog-list__item-btn
@@ -336,6 +299,7 @@
 		
 		@media (max-width: 1000px) {
 			margin: 50px 0px 0px 0px;
+			padding: 0px 0px;
 			flex-flow: row wrap;
 			justify-content: space-between;
 		}
