@@ -336,7 +336,7 @@ $(function(){
 		$(this).toggleClass("active");
 	});
 
-/***************** Name ********************/
+/***************** special-product ********************/
 	$('.special-product__colors-color').click(function(){
 	$(".special-product__colors-color").removeClass("active");
 	$(this).addClass("active");
@@ -388,63 +388,18 @@ $(function(){
 	  });
 
 	});
-
-
-/***************** polzunok ********************/
-/* $(".sidebar-price__polzunok-line").slider({
-	min: 0,
-	max: 5000,
-	values: [2000, 3000],
-	range: true,
-	animate: "fast",
-	slide : function(event, ui) {    
-		 $(".sidebar-price__polzunok-input-l").val(ui.values[ 0 ]);   
-		 $(".sidebar-price__polzunok-input-r").val(ui.values[ 1 ]);  
-	}    
-});
-$(".sidebar-price__polzunok-input-l").val($(".sidebar-price__polzunok-line").slider("values", 0));
-$(".sidebar-price__polzunok-input-r").val($(".sidebar-price__polzunok-line").slider("values", 1));
-$(document).focusout(function() {
-	var input_left = $(".sidebar-price__polzunok-input-l").val().replace(/[^0-9]/g, ''),    
-	opt_left = $(".sidebar-price__polzunok-line").slider("option", "min"),
-	where_right = $(".sidebar-price__polzunok-line").slider("values", 1),
-	input_right = $(".sidebar-price__polzunok-input-r").val().replace(/[^0-9]/g, ''),    
-	opt_right = $(".sidebar-price__polzunok-line").slider("option", "max"),
-	where_left = $(".sidebar-price__polzunok-line").slider("values", 0); 
-	if (input_left > where_right) { 
-		 input_left = where_right; 
-	}
-	if (input_left < opt_left) {
-		 input_left = opt_left; 
-	}
-	if (input_left == "") {
-	input_left = 0;    
-	}        
-	if (input_right < where_left) { 
-		 input_right = where_left; 
-	}
-	if (input_right > opt_right) {
-		 input_right = opt_right; 
-	}
-	if (input_right == "") {
-	input_right = 0;    
-	}    
-	$(".sidebar-price__polzunok-input-l").val(input_left); 
-	$(".sidebar-price__polzunok-input-r").val(input_right); 
-	$(".sidebar-price__polzunok-line").slider( "values", [ input_left, input_right ] );
-}); */
  
-	  /***************** Tab-menu ********************/
-	  $(".tabs__container:first").show()
-	  $(".tabs__nav li:first").addClass('active');
-  
-	 $(".tabs__nav li").click(function(event) {
-		index = $(this).index();
-		$(".tabs__nav li").removeClass('active');
-		$(this).addClass('active');
-		$('.tabs__container').hide();
-		$('.tabs__container').eq(index).show();
-	 });
+	/***************** Tab-menu ********************/
+	$(".tabs__container:first").show()
+	$(".tabs__nav li:first").addClass('active');
+
+	$(".tabs__nav li").click(function(event) {
+	index = $(this).index();
+	$(".tabs__nav li").removeClass('active');
+	$(this).addClass('active');
+	$('.tabs__container').hide();
+	$('.tabs__container').eq(index).show();
+	});
 
 	 /***************** Add active for setting__currency-link ********************/
 	$('.setting__currency-link').click(function() {
