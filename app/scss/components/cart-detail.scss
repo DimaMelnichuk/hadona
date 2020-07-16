@@ -303,48 +303,31 @@
 	}
 
 	&__colors-color {
-		width: 25px;
-		height: 25px;
-		border-radius: 50%;
-		margin: 0 10px;
-		border: 5px solid;
+		position: relative;
 		cursor: pointer;
+		margin: 0 10px;
+		height: 18px;
+		width: 18px;
+		border-radius: 50%;
+		border: 1px solid #000;
 
-		&[color="blue"] {
-			background-color: #2175f5;
-			border-color: #2175f5;
+		&.black {
+			background: #000;
 		}
-		&[color="red"] {
-			background-color: #f84848;
-			border-color: #f84848;
+		&.white {
+			background: #fff;
 		}
-		&[color="green"] {
-			background-color: #29b864;
-			border-color: #29b864;
-		}
-		&[color="orange"] {
-			background-color: #ff5521;
-			border-color: #ff5521;
-		}
-		&[color="black"] {
-			background-color: #444;
-			border-color: #444;
-		}
-		&.active {
-			border-color: #dddddd;
-			box-shadow: 0 0 10px 0.5px rgba(0,0,0,0.2);
-			transform: scale(1.1);
+		&.active::after {
+			content: "";
+			position: absolute;
+			left: -5px;
+			top: -5px;
+			height: 26px;
+			width: 26px;
+			border: 2px solid #888;
+			border-radius: 50%;
 		}
 	}
-
-	&__img {
-		opacity: 0;
-
-		&.show {
-			opacity: 1;
-		}
-	}
-
 
 	// .cart-detail__actions
 
@@ -456,18 +439,4 @@
 			color: #e12121;
 		}
 	}
-
-	// .cart-detail__actions-categories
-
-	&__actions-categories {
-	}
-
-	// .cart-detail__actions-tags
-
-	&__actions-tags {
-	}
-}
-
-:root {
-	--primary: #2175f5;
 }

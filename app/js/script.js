@@ -3,4 +3,3 @@
 @@include('components/accordion.js')
 @@include('components/rating.js')
 @@include('components/countdown.js')
-@@include('components/colors.js')
