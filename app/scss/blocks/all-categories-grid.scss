@@ -80,16 +80,16 @@
 		margin: 0px 0px 50px 0px;
 
 		@media (max-width: 1400px) {
-			margin: 0px 0px 40px 0px;
+			margin: 0px 0px 30px 0px;
 		}
 
 		@media (max-width: 1000px) {
 			flex: 0 1 48%;
-			margin: 0 0 30px 0;
+			margin: 0 0 20px 0;
 		}
 
 		@media (max-width: 480px) {
-			margin: 0 0 20px 0;
+			margin: 0 0 15px 0;
 		}
 	}
 
@@ -100,6 +100,37 @@
 
 			img {
 				height: 180px;
+			}
+		}
+	}
+
+	&__content-featured {
+		background: #fff;
+		padding: 20px 15px;
+
+		.featured__slider-item {
+			padding: 0px;
+		}
+
+		.featured__slider {
+			margin: 0px;
+		}
+
+		.cart {
+			position: relative;
+
+			&::after {
+				position: absolute;
+				content: "";
+				height: 100%;
+				width: 1px;
+				right: 0;
+				top: 0;
+				background-color: #dddddd;
+			}
+
+			&:hover {
+				box-shadow: none;
 			}
 		}
 	}

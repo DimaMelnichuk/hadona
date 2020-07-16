@@ -23,6 +23,11 @@
 		.cart__body-actions {
 			opacity: 1;
 		}
+
+		.cart__img--hover img {
+			border: 1px solid #dddddd;
+		}
+
 	}
 	// .cart__img
 
@@ -47,6 +52,15 @@
 			position: absolute;
 			top: 0;
 			left: 0;
+		}
+	}
+	
+	&__img--hover {
+
+		img {
+			border: 1px solid #fff;
+			padding: 10px;
+			transition: border .3s;
 		}
 	}
 
