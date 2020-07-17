@@ -77,12 +77,6 @@ $(function(){
 		arrows: true,
 		responsive: [
 			{
-				breakpoint: 1500,
-				settings: {
-					slidesToShow: 4,
-				}
-			},
-			{
 				breakpoint: 1165,
 				settings: {
 					slidesToShow: 3,
@@ -234,7 +228,7 @@ $(function(){
 		/* asNavFor: '.slider-for', */
 		responsive: [
 			{
-				breakpoint: 1500,
+				breakpoint: 1750,
 				settings: {
 					slidesToShow: 7,
 				}
@@ -336,6 +330,16 @@ $(function(){
 		$(this).toggleClass("active");
 	});
 
+
+	/***************** Mobile-menu ********************/
+	$(".menu__link-dropdown").click(function(event){
+		if($(".menu__link-dropdown").hasClass("active")){
+			$(".menu__link-dropdown").not($(this)).removeClass("active");
+			$(".menu__dropdown").not($(this).next()).slideUp(300);
+		}
+		$(this).toggleClass("active").next().slideToggle(300);
+	});
+
 /***************** special-product ********************/
 	$('.special-product__colors-color').click(function(){
 	$(".special-product__colors-color").removeClass("active");
@@ -344,8 +348,8 @@ $(function(){
 	$(".special-product__image").css("background-image",$(this).attr("data-pic"));
 	});
 
-	 /***************** checkmark ********************/
-	 $('.checkmark').on('click', function(event) {
+	/***************** checkmark ********************/
+	$('.checkmark').on('click', function(event) {
 		if($(this).hasClass('active')){
 			$(this).find('input').prop('checked',false);
 		}else{
@@ -412,6 +416,7 @@ $(function(){
 		$('.setting__lang-link').removeClass('active');
 		$(this).addClass('active')
 	});
+
 
 });
 
@@ -619,61 +624,3 @@ function getTimeRemaining(endtime) {
  initializeClock('countdown', deadline);
  var deadline_1 = new Date(Date.parse(new Date()) + 30 * 24 * 60 * 60 * 1000); // for endless timer
  initializeClock('countdown_1', deadline_1);
-const colors = document.querySelectorAll('.cart-detail__colors-color');
-const shoes = document.querySelectorAll('.cart-detail__img');
-
-let prevColor = "blue";
-let animationEnd = true;
-
-function changeSize(){
-    sizes.forEach(size => size.classList.remove('active'));
-    this.classList.add('active');
-}
-
-
-function changeColor(){
-    if(!animationEnd) return;
-	 let primary = this.getAttribute('primary');
-	 let color = this.getAttribute('color');
-	 let shoe = document.querySelector(`.card__img[color="${color}"]`);
-
-    if(color == prevColor) return;
-
-    colors.forEach(c => c.classList.remove('active'));
-    this.classList.add('active');
-
-    document.documentElement.style.setProperty('--primary', primary);
-    
-    shoes.forEach(s => s.classList.remove('show'));
-    shoe.classList.add('show');
-
-    gradients.forEach(g => g.classList.remove('first', 'second'));
-    gradient.classList.add('first');
-    prevGradient.classList.add('second');
-
-    prevColor = color;
-    animationEnd = false;
-
-    gradient.addEventListener('animationend', () => {
-        animationEnd = true;
-    })
-}
-
-sizes.forEach(size => size.addEventListener('click', changeSize));
-colors.forEach(c => c.addEventListener('click', changeColor));
-
-let x = window.matchMedia("(max-width: 1000px)");
-
-function changeHeight(){
-    if(x.matches){
-        let shoeHeight = shoes[0].offsetHeight;
-        shoeBg.style.height = `${shoeHeight * 0.9}px`;
-    }
-    else{
-        shoeBg.style.height = "475px";
-    }
-}
-
-changeHeight();
-
-window.addEventListener('resize', changeHeight);
