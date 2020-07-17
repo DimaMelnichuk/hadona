@@ -228,7 +228,7 @@ $(function(){
 		/* asNavFor: '.slider-for', */
 		responsive: [
 			{
-				breakpoint: 1500,
+				breakpoint: 1750,
 				settings: {
 					slidesToShow: 7,
 				}
@@ -330,6 +330,16 @@ $(function(){
 		$(this).toggleClass("active");
 	});
 
+
+	/***************** Mobile-menu ********************/
+	$(".menu__link-dropdown").click(function(event){
+		if($(".menu__link-dropdown").hasClass("active")){
+			$(".menu__link-dropdown").not($(this)).removeClass("active");
+			$(".menu__dropdown").not($(this).next()).slideUp(300);
+		}
+		$(this).toggleClass("active").next().slideToggle(300);
+	});
+
 /***************** special-product ********************/
 	$('.special-product__colors-color').click(function(){
 	$(".special-product__colors-color").removeClass("active");
@@ -338,20 +348,8 @@ $(function(){
 	$(".special-product__image").css("background-image",$(this).attr("data-pic"));
 	});
 
-
-	/***************** Name ********************/
-		$('.cart-detail__colors-color').click(function(){
-		$(".cart-detail__colors-color").removeClass("active");
-		$(this).addClass("active");
-		$("body").css("background",$(this).attr("data-color"));
-		$(".product-card__buy-price").css("color",$(this).attr("data-color"));
-		$(".product-card__buy-btn").css("color",$(this).attr("data-color"));
-		$(".product-card__images").css("background-image",$(this).attr("data-pic"));
-
-	});
-
-	 /***************** checkmark ********************/
-	 $('.checkmark').on('click', function(event) {
+	/***************** checkmark ********************/
+	$('.checkmark').on('click', function(event) {
 		if($(this).hasClass('active')){
 			$(this).find('input').prop('checked',false);
 		}else{
@@ -418,6 +416,7 @@ $(function(){
 		$('.setting__lang-link').removeClass('active');
 		$(this).addClass('active')
 	});
+
 
 });
 

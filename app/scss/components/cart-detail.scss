@@ -390,6 +390,11 @@
 		margin: 0px 30px 0px 0px;
 		transition: background-color .3s;
 
+		@media (max-width: 950px) {
+			padding: 14px 15px;
+			margin: 0px 15px 0px 0px;
+		}
+
 		&:hover {
 			background-color: #e12020;
 		}
@@ -418,6 +423,7 @@
 
 	&__actions-list {
 		display: flex;
+		flex-flow: row wrap;
 		margin: 0px 19px 0px 0px;
 	}
 
@@ -425,6 +431,7 @@
 
 	&__actions-item {
 		font-size: 13px;
+		line-height: 15px;
 		font-weight: 400;
 		color: #888888;
 		margin: 0px 5px 0px 0px;

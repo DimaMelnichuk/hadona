@@ -2,6 +2,11 @@
 	position: relative;
 	margin-left: 60px;
 	margin-right: 70px;
+
+	@media (max-width: 950px) {
+		margin-left: 50px;
+		margin-right: 50px;
+	}
  }
  
  input[type=number]::-webkit-inner-spin-button,
@@ -27,6 +32,11 @@
 	font-size: 13px;
 	font-weight: 400;
 	background-color: transparent;
+
+	@media (max-width: 950px) {
+		width: 35px;
+		height: 35px;
+	}
  }
  
  .quantity input:focus {
@@ -36,7 +46,11 @@
  .quantity-nav {
 	float: left;
 	position: static;
-	height: 42px;
+	height: 40px;
+
+	@media (max-width: 950px) {
+		height: 35px;
+	}
  }
  
  .quantity-button {
@@ -51,6 +65,11 @@
 	align-items: center;
 	font-size: 22px;
 	font-weight: 800;
+
+	@media (max-width: 950px) {
+		width: 35px;
+		height: 35px;
+	}
  }
  
  .quantity-button.quantity-up {
@@ -62,4 +81,8 @@
 	position: absolute;
 	border-radius: 5px 0 0 5px;
 	right: 40px;
+
+	@media (max-width: 950px) {
+		right: 35px;
+	}
  }

@@ -5,6 +5,10 @@
 	padding: 20px;
 	overflow: hidden;
 
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
 	@media (max-width: 1366px) {
 		padding: 10px;
 	}
@@ -127,6 +131,12 @@
 	&__rating[data-total-value="5"] .cart__rating-item:nth-child(n + 1) {
 		color: #e2bc0a;
 	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
 	// .cart__body-color
 
 	&__body-color {
@@ -157,6 +167,7 @@
 	// .cart__body-descr
 
 	&__body-title {
+		flex: 1 1 auto;
 		display: block;
 		color: #888888;
 		font-weight: 400;
