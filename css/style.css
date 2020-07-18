@@ -6553,6 +6553,7 @@ body.lock {
   .sidebar-nav__title {
     margin: 0 20px 10px 20px;
     padding: 20px 0px 15px;
+    font-size: 18px;
   }
 
   .sidebar-nav__link {
