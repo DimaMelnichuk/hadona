@@ -6849,6 +6849,14 @@ body.lock {
 }
 
 @media (max-width: 1300px) {
+  .featured__slider {
+    margin: 0px -10px;
+  }
+
+  .featured__slider-item {
+    padding: 10px 10px 0 10px;
+  }
+
   .about__descr-text span {
     padding: 0 0 10px 0;
   }
@@ -6896,6 +6904,10 @@ body.lock {
   .menu__link {
     padding: 20px 15px;
     font-size: 15px;
+  }
+
+  .menu__submenu {
+    top: 57px;
   }
 
   .basket__setting-icon {
