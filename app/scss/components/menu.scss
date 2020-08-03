@@ -172,6 +172,10 @@
 		background: #000;
 		border-top: 1px solid #e12121;
 
+		@media (max-width: 1265px) {
+			top: 57px;
+		}
+
 		.menu__item::before,
 		.menu__item:last-child::after{
 			content: none;
