@@ -2733,6 +2733,10 @@
   display: flex;
 }
 
+.menu__item-search a:hover {
+  color: #e12121;
+}
+
 .menu__link {
   position: relative;
   color: #888888;
@@ -4524,6 +4528,9 @@
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
   padding: 0px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .perfect-product__item {
@@ -4552,6 +4559,13 @@
 
 .perfect-product__item-body {
   padding: 0px 0px 0px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .perfect-product__item-title {
@@ -4571,6 +4585,9 @@
   font-size: 13px;
   line-height: 22px;
   margin: 0px 0px 30px 0px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .perfect-product__item-descr span {
@@ -6381,6 +6398,10 @@ body.lock {
     padding: 0px 0px 30% 0px;
   }
 
+  .cart {
+    padding: 10px;
+  }
+
   .slick-arrow {
     width: 40px;
     height: 40px;
@@ -6734,10 +6755,6 @@ body.lock {
     padding: 60px 0px;
   }
 
-  .cart {
-    padding: 10px;
-  }
-
   .cart__img {
     padding: 0px 0px 70% 0px;
   }
@@ -6902,12 +6919,14 @@ body.lock {
 
 @media (max-width: 1265px) {
   .menu__link {
-    padding: 20px 15px;
+    padding: 22px 15px;
     font-size: 15px;
   }
 
   .menu__submenu {
     top: 57px;
+    left: -100px;
+    width: 900px;
   }
 
   .basket__setting-icon {
@@ -6987,7 +7006,7 @@ body.lock {
 
 @media (max-width: 1150px) {
   .menu__link {
-    padding: 20px 10px;
+    padding: 23px 10px;
     font-size: 14px;
   }
 
@@ -7058,8 +7077,8 @@ body.lock {
     position: fixed;
     top: 0;
     left: 0;
-    width: 40%;
-    height: 100vh;
+    width: 25%;
+    height: 100%;
     padding: 80px 0px 0px 5px;
     overflow: auto;
     background-color: black;
@@ -7080,12 +7099,17 @@ body.lock {
   }
 
   .menu__list {
+    /* 		flex-direction: column;
+			flex-basis: 100%; */
+    display: block;
+    width: 100%;
+  }
+
+  .menu__item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
   }
 
   .menu__item::before {
@@ -7098,6 +7122,9 @@ body.lock {
 
   .menu__link {
     color: #fff;
+    padding: 16px 10px;
+    width: 100%;
+    font-size: 22px;
   }
 
   .menu__link-btn::after {
@@ -7106,6 +7133,35 @@ body.lock {
 
   .menu__link-btn {
     color: #888888;
+  }
+
+  .menu__submenu-link:hover {
+    color: #fff;
+  }
+
+  .menu__dropdown {
+    width: 100%;
+    position: relative;
+  }
+
+  .menu__item-dropdown {
+    display: none;
+  }
+
+  .menu__link-dropdown {
+    width: 100%;
+  }
+
+  .menu__link-dropdown.active {
+    color: #e12121;
+  }
+
+  .menu__item:hover .menu__dropdown {
+    display: none;
+  }
+
+  .menu__dropdown-link {
+    width: 100%;
   }
 
   .menu__burger {
@@ -7522,48 +7578,8 @@ body.lock {
     display: block;
   }
 
-  .menu__item {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
   .menu__link {
     font-size: 22px;
-  }
-
-  .menu__link:hover {
-    color: #fff;
-  }
-
-  .menu__submenu-link:hover {
-    color: #fff;
-  }
-
-  .menu__dropdown {
-    width: 100%;
-    position: relative;
-  }
-
-  .menu__item-dropdown {
-    display: none;
-  }
-
-  .menu__link-dropdown {
-    width: 100%;
-  }
-
-  .menu__link-dropdown.active {
-    color: #e12121;
-  }
-
-  .menu__item:hover .menu__dropdown {
-    display: none;
-  }
-
-  .menu__dropdown-link {
-    width: 100%;
   }
 
   .accordion {
@@ -7727,6 +7743,10 @@ body.lock {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 66.666%;
             flex: 0 1 66.666%;
+  }
+
+  .menu {
+    width: 30%;
   }
 
   .our-team__column {
@@ -8340,6 +8360,10 @@ body.lock {
     font-size: 30px;
   }
 
+  .menu {
+    width: 38%;
+  }
+
   .our-team__column {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 50%;
@@ -8352,15 +8376,6 @@ body.lock {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
-  }
-
-  .menu {
-    width: 60%;
-  }
-
-  .menu__link {
-    padding: 20px;
-    font-size: 22px;
   }
 
   .cart__img {
@@ -8499,6 +8514,7 @@ body.lock {
 
   .policy__item {
     padding: 0px 0px 10px 0px;
+    width: 100%;
   }
 
   .policy__item::after {
