@@ -77,6 +77,12 @@ $(function(){
 		arrows: true,
 		responsive: [
 			{
+				breakpoint: 1300,
+				settings: {
+					slidesToShow: 4,
+				}
+			},
+			{
 				breakpoint: 1165,
 				settings: {
 					slidesToShow: 3,
@@ -130,6 +136,7 @@ $(function(){
 		dots: true,
 		slidesToShow: 3,
 		slidesToScroll: 1,
+		adaptiveHeight: true,
 		responsive: [
 			{
 				breakpoint: 1100,

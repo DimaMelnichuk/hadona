@@ -6,8 +6,8 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		width: 40%;
-		height: 100vh;
+		width: 25%;
+		height: 100%;
 		padding: 80px 0px 0px 5px;
 		overflow: auto;
 		background-color: rgba(#000, 1);
@@ -19,8 +19,12 @@
 		}
 	}
 
-	@media (max-width: 600px) {
-		width: 60%;
+	@media (max-width: 900px) {
+		width: 30%;
+	}
+
+	@media (max-width: 650px) {
+		width: 38%;
 	}
 
 	@media (max-width: 480px) {
@@ -34,8 +38,10 @@
 		z-index: 3;
 
 		@media (max-width: 1060px) {
-			flex-direction: column;
-			flex-basis: 100%;
+	/* 		flex-direction: column;
+			flex-basis: 100%; */
+			display: block;
+			width: 100%;
 		}
 	}
 
@@ -45,7 +51,7 @@
 		display: flex;
 		position: relative;
 
-		@media (max-width: 1000px) {
+		@media (max-width: 1060px) {
 			flex-direction: column;
 		}
 
@@ -83,6 +89,12 @@
 	&__item-search {
 		position: relative;
 		display: flex;
+
+		a {
+			&:hover {
+				color: #e12121;
+			}
+		}
 	}
 
 	// .menu__link
@@ -96,25 +108,23 @@
 		text-transform: uppercase;
 
 		@media (max-width: 1265px) {
-			padding: 20px 15px;
+			padding: 22px 15px;
 			font-size: 15px;
 		}
 
 		@media (max-width: 1150px) {
-			padding: 20px 10px;
+			padding: 23px 10px;
 			font-size: 14px;
 		}
 
 		@media (max-width: 1060px) {
 			color: #fff;
-		}
-
-		@media (max-width: 1000px) {
+			padding: 16px 10px;
+			width: 100%;
 			font-size: 22px;
 		}
 
-		@media (max-width: 600px) {
-			padding: 20px;
+		@media (max-width: 1000px) {
 			font-size: 22px;
 		}
 
@@ -125,10 +135,6 @@
 
 		&:hover {
 			color: #e12121;
-
-			@media (max-width: 1000px) {
-				color: #fff;
-			}
 		}
 	}
 
@@ -174,6 +180,8 @@
 
 		@media (max-width: 1265px) {
 			top: 57px;
+			left: -100px;
+			width: 900px;
 		}
 
 		.menu__item::before,
@@ -241,7 +249,7 @@
 			color: #e12121;
 			transform: translateX(10px);
 
-			@media (max-width: 1000px) {
+			@media (max-width: 1060px) {
 				color: #fff;
 			}
 		}
@@ -271,7 +279,7 @@
 		background: #000;
 		border-top: 1px solid #e12121;
 
-		@media (max-width: 1000px) {
+		@media (max-width: 1060px) {
 			width: 100%;
 			position: relative;
 		}
@@ -279,14 +287,14 @@
 
 	&__item-dropdown {
 
-		@media (max-width: 1000px) {
+		@media (max-width: 1060px) {
 			display: none;
 		}
 	}
 
 	&__link-dropdown {
 
-		@media (max-width: 1000px) {
+		@media (max-width: 1060px) {
 			width: 100%;
 		
 			&.active {
@@ -310,7 +318,7 @@
 	&__item:hover .menu__dropdown{
 		display: block;
 
-		@media (max-width: 1000px) {
+		@media (max-width: 1060px) {
 			display: none;
 		}
 	}
@@ -321,7 +329,7 @@
 		font-weight: 400;
 		transition: color .3s ease, transform .3s ease;
 
-		@media (max-width: 1000px) {
+		@media (max-width: 1060px) {
 			width: 100%;
 		}
 
