@@ -15,14 +15,14 @@ let path = {
 		html: [source_folder + "/**/*.html", "!" + source_folder + "/**/_*.html"],
 		css: source_folder + "/scss/style.scss",
 		js: source_folder + "/js/*.js",
-		img: source_folder + "/img/**/*.+(png|jpg|gif|ico|svg|webp)",
+		img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
 		fonts: source_folder + "/fonts/**/*",
 	},
 	watch: {
 		html: source_folder + "/**/*.html",
 		css: source_folder + "/scss/**/*.scss",
 		js: source_folder + "/js/**/*.js",
-		img: source_folder + "/img/**/*.(png,jpg,gif,ico,svg,webp)",
+		img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}"
 	},
 	clean: "./" + project_folder + "/"
 }
@@ -43,12 +43,8 @@ let {src, dest} = require('gulp'),
 	webphtml = require('gulp-webp-html'),
 	webpscss = require('gulp-webpcss'),
 	svgSprite = require('gulp-svg-sprite'),
-	fonter = require('gulp-fonter'),
-	ttf2woff = require("gulp-ttf2woff"),
-	ttf2woff2 = require("gulp-ttf2woff2"),
 	ghPages = require('gh-pages'),
-	pathPages = require('path'),
-	sourcemaps = require('gulp-sourcemaps');
+	pathPages = require('path');
 
 
 function deploy(cb) {
@@ -76,7 +72,6 @@ function html() {
 
 function css() {
 	return src(path.src.css)
-		.pipe(sourcemaps.init())
 		.pipe(scss({outputStyle: "expanded"}))
 		.pipe(group_media())
 		.pipe(autoprefixer({
@@ -88,7 +83,6 @@ function css() {
 		.pipe(rename({
 			extname: ".min.css"
 		}))
-		.pipe(sourcemaps.write())
 		.pipe(dest(path.build.css))
 		.pipe(browsersync.stream())
 }

@@ -21,6 +21,7 @@ $(function(){
 		slidesToShow: 6,
 		slidesToScroll: 1,
 		arrows: true,
+		swipeToSlide: true,
 		responsive: [
 			{
 				breakpoint: 1500,
@@ -75,6 +76,7 @@ $(function(){
 		slidesToShow: 5,
 		slidesToScroll: 1,
 		arrows: true,
+		swipeToSlide: true,
 		responsive: [
 			{
 				breakpoint: 1300,
