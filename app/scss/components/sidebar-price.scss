@@ -13,10 +13,36 @@
 		padding: 0px 0px 20px 0px;	
 		border-bottom: 1px solid #dddddd;
 	}
+	// .sidebar-price__slider
 
-	// .sidebar-price__polzunok
+	&__slider {
+		height: 4px;
+		background-color: blue;
+	}
+	// .sidebar-price__values
 
-	
+	&__values {
+		display: flex;
+		flex-direction: column;
+		margin: 0px -15px;
+	}
+
+	// .sidebar-price__column
+
+	&__column {
+		flex: 0 1 50%;
+		padding: 15px;
+	}
+
+	// .sidebar-price__input
+
+	&__input {
+
+		input {
+			border: 1px solid #888888;
+		}
+	}
+
 
 	// .sidebar-price__polzunok-line
 
@@ -37,57 +63,4 @@
 			color: #ffffff;
 		}
 	}
-}
-
-.sidebar-price__polzunok {
-}
-
-.sidebar-price__polzunok .ui-slider {
-	position: relative;
-	background-color: #dddddd;
-	height: 5px;
-}
-.sidebar-price__polzunok .ui-slider .ui-slider-handle {
-	position: absolute;
-	margin-left: 0;
-	margin-right: -16px;
-	width: 20px;
-	height: 20px;
-	cursor: pointer;
-	border-radius: 50%;
-	border: 1px solid #dddddd;
-	top: -8px;
-	background: #FFF;
-	z-index: 2;
-	transition: transform 0.2s, border 0.4s;
-}
-.sidebar-price__polzunok .ui-slider .ui-slider-handle:hover,
-.sidebar-price__polzunok .ui-slider .ui-slider-handle:focus {
-	transform: scale(1.2);
-	border: 1px solid #888888;
-}
-.sidebar-price__polzunok-input-l,
-.sidebar-price__polzunok-input-r {
-	height: 30px;
-	border-radius: 5px;
-	background-color: #f2f2f2;
-	padding: 10px;
-	width: 110px;
-	color: #888888;
-	font-size: 13px;
-	font-weight: 400;
-	margin: 0px 0px 30px 0px;
-	display: inline-block;
-
-	@media (max-width: 1366px) {
-		width: 80px;
-	}
-}
-.sidebar-price__polzunok .ui-slider .ui-slider-range {
-	position: absolute;
-	z-index: 1;
-	height: 5px;
-	border: 0;
-	margin: 0px 0px 35px 0px;
-	background-color: #888888;
 }

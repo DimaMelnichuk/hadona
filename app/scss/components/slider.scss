@@ -129,7 +129,12 @@
 /* ==========================================================================
   featured__slider
 ========================================================================== */
-.featured__slider .lick-track {
+.featured__slider .slick-track {
+	display: flex;
+	height: 100%;
+}
+
+.featured__slider .slick-slide {
 	display: flex;
 }
 

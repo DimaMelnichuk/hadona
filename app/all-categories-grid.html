@@ -10,15 +10,21 @@
 		<main class="page">
 			@@include('blocks/_page-policy.html')
 			<!-- breadcrumbs -->
-			<div class="breadcrumbs">
+			<nav class="breadcrumbs">
 				<div class="container">
 					<ul class="breadcrumbs__list">
-						<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Home</a></li>
-						<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="all-categories.html">Kitcheng electricals</a></li>
-						<li class="breadcrumbs__item">Coffee machines</li>
+						<li>
+							<a class="breadcrumbs__link" href="index.html">Home</a>
+						</li>
+						<li>
+							<a class="breadcrumbs__link" href="all-categories.html">Kitcheng electricals</a>
+						</li>
+						<li>
+							<span class="breadcrumbs__item">Coffee machines</span>
+						</li>
 					</ul>
 				</div>
-			</div>
+			</nav>
 			<!-- breadcrumbs end -->
 
 			<!-- all-categories-grid -->
@@ -43,10 +49,21 @@
 							<!-- sidebar-price -->
 							<div class="all-categories-grid__sidebar-price sidebar-price">
 								<div class="sidebar-price__title">By price</div>
-								<div class="sidebar-price__polzunok">
-									<input type="text" class="sidebar-price__polzunok-input-l"/>
-									<input type="text" class="sidebar-price__polzunok-input-r"/>
-							  </div>
+								<div class="price-filter">
+									<div class="price-filter__values">
+										<div class="price-filter__values-column">
+											<div class="price-filter__values-input">
+												<input class="input" id="filter-price__start" autocomplete="off" type="number" name="form[]">
+											</div>
+										</div>
+										<div class="price-filter__values-column">
+											<div class="price-filter__values-input">
+												<input class="input" id="filter-price__end" autocomplete="off" type="number" name="form[]">
+											</div>
+										</div>
+									</div>
+									<div class="price-filter__slider"></div>
+								</div>
 							  <button class="sidebar-price__polzunok-btn btn">Filter now</button>
 							</div>
 							<!-- sidebar-price end -->

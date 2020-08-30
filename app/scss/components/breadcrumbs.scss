@@ -5,6 +5,8 @@
 		padding: 22px 0px;
 		display: flex;
 		border-bottom: 1px solid #dddddd;
+		font-size: 13px;
+		font-weight: 400;
 
 		@media (max-width: 700px) {
 			flex-direction: column;
@@ -14,8 +16,6 @@
 	// .breadcrumbs__item
 
 	&__item {
-		font-size: 13px;
-		font-weight: 400;
 		color: #333333;
 
 		&:not(:last-child) {
@@ -33,7 +33,7 @@
 		&::after {
 			content: ">";
 			position: absolute;
-			margin: 0px 0px 0px 12px;
+			margin: 0px 0px 0px 10px;
 		}
 
 		&:hover {
