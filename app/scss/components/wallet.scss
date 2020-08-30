@@ -96,8 +96,9 @@
 		bottom: 0;
 		height: 20px;
 		width: 20px;
-		line-height: 15px;
-		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		color: #888888;
 		border: 2px solid #888888;
 		border-radius: 50%;

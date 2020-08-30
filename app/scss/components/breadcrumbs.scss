@@ -1,15 +1,24 @@
 .breadcrumbs {
+	overflow: auto;
+	border-bottom: 1px solid #dddddd;
+	padding: 22px 0px;
 	// .breadcrumbs__list
 
 	&__list {
-		padding: 22px 0px;
 		display: flex;
-		border-bottom: 1px solid #dddddd;
+		align-items: center;
+		white-space: nowrap;
 		font-size: 13px;
 		font-weight: 400;
 
-		@media (max-width: 700px) {
-			flex-direction: column;
+		li {
+			margin: 0px 10px 0px 0px;
+			padding: 0px 20px 0px 0px;
+			
+			&:last-child {
+				margin: 0;
+				padding: 0;
+			}
 		}
 	}
 
@@ -17,10 +26,6 @@
 
 	&__item {
 		color: #333333;
-
-		&:not(:last-child) {
-			margin: 0px 0px 10px 0px;
-		}
 	}
 
 	// .breadcrumbs__link
@@ -28,7 +33,6 @@
 	&__link {
 		color: #888888;
 		position: relative;
-		margin: 0px 24px 0px 0px;
 
 		&::after {
 			content: ">";
