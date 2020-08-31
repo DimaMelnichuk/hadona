@@ -430,6 +430,27 @@ $(function(){
 });
 
 
+
+
+/***************** featured-tabs ********************/
+document.querySelectorAll('.featured-tabs__title-item').forEach((item) =>
+	item.addEventListener('click', function (e) {
+		e.preventDefault();
+		const id = e.target.getAttribute('href').replace('#', '');
+
+		document.querySelectorAll('.featured-tabs__title-item').forEach(
+			(child) => child.classList.remove('featured-tabs__title-item--active')
+		);
+		document.querySelectorAll('.featured-tabs__content-item').forEach(
+			(child) => child.classList.remove('featured-tabs__content-item--active')
+		);
+
+		item.classList.add('featured-tabs__title-item--active');
+		document.getElementById(id).classList.add('featured-tabs__content-item--active');
+	})
+);
+
+
 /***************** Menu-wallet ********************/
 let wallet_icon = document.querySelector('.basket__wallet-icon');
 let wallet_menu = document.querySelector('.wallet');
@@ -502,11 +523,20 @@ document.documentElement.addEventListener("click", function (e) {
 /***************** Menu-burger ********************/
 let menu_burger = document.querySelector('.menu__burger');
 let menu = document.querySelector('.menu');
-let menu_lock = document.querySelector('body');
 menu_burger.addEventListener("click", function (e) {
 	menu.classList.toggle('active');
 	menu_burger.classList.toggle('active');
-	menu_lock.classList.toggle('lock');
+});
+
+document.documentElement.addEventListener("click", function (e) {
+	if (!e.target.closest('.header__menu-inner')) {
+		menu_burger.classList.remove('active');
+	}
+});
+document.documentElement.addEventListener("click", function (e) {
+	if (!e.target.closest('.header__menu-inner')) {
+		menu.classList.remove('active');
+	}
 });
 
 /***************** WebP ********************/
@@ -541,5 +571,38 @@ ibg();
 
 
 
+const filterPrice = document.querySelector('.price-filter__slider');
 
+noUiSlider.create(filterPrice, {
+	 start: [1000, 10000],
+	 connect: true,
+    range: {
+        'min': [0],
+        'max': [15000]
+    }
+});
 
+const priceStart = document.getElementById("filter-price__start");
+const priceEnd = document.getElementById("filter-price__end");
+priceStart.addEventListener('change', setPriceValues);
+priceEnd.addEventListener('change', setPriceValues);
+
+function setPriceValues() {
+	let priceStartValue;
+	let priceEndValue;
+	if (priceStart.value !='') {
+		priceStartValue = priceStart.value;
+	}
+	if (priceEnd.value !='') {
+		priceEndValue = priceEnd.value;
+	}
+	filterPrice.noUiSlider.set([priceStartValue, priceEndValue]);
+} 
+
+var snapValues = [
+   document.getElementById('filter-price__start'),
+   document.getElementById('filter-price__end')
+];
+filterPrice.noUiSlider.on('update', function (values, handle) {
+	snapValues[handle].value = values[handle];
+});

@@ -1,15 +1,73 @@
 .toolbar {
 
+	&--top {
+		border-bottom: 1px solid #dddddd;
+		padding: 0px 0px 20px 0px;
+		margin: 0px 0px 30px 0px;
+	
+		@media (max-width: 768px) {
+			margin: 0 0 20px 0;
+		}
+	}
+
+	&--bottom {
+		border-top: 1px solid #dddddd;
+		padding: 20px 0px 0px 0px;
+		margin: 30px 0px 80px 0px;
+
+		@media (max-width: 1400px) {
+			margin: 30px 0px 60px 0px;
+		}
+	
+		@media (max-width: 768px) {
+			margin: 20px 0px 40px 0px;
+		}
+	}
+
 	// .toolbar__row
 
 	&__row {
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
-		border-bottom: 1px solid #dddddd;
-		padding: 0px 0px 20px 0px;
+		flex-flow: row wrap;
+	}
+
+	// .toolbar__column
+
+	&__column {
+		display: flex;
 
 		@media (max-width: 768px) {
-			padding: 0px 0px 10px 0px;
+			flex-basis: content;
+			order: 2;
+			justify-content: space-between;
+		}
+
+		@media (max-width: 450px) {
+			flex: 0 1 100%;
+		}
+	}
+
+	&__column--pagination {
+
+		@media (max-width: 768px) {
+
+			&:nth-child(2) {
+				flex: 0 1 100%;
+				order: 1;
+				justify-content: center;
+			}
+		}
+	}
+
+	// .toolbar__sort
+
+	&__sort {
+		margin: 0px 0px 0px 1px;
+
+		@media (max-width: 450px) {
+			margin: 0px 0px 10px 1px;
 		}
 	}
 
@@ -19,6 +77,10 @@
 		display: inline-block;
 		color: #888888;
 		margin: 0px 15px 0px 0px;
+
+		@media (max-width: 1200px) {
+			margin: 0 10px 0 0;
+		}
 
 		@media (max-width: 500px) {
 			margin: 0px 15px 10px 0px;
@@ -35,15 +97,15 @@
 		color: #888888;
 		font-size: 13px;
 		font-weight: 400;
-
-		@media (max-width: 500px) {
-			display: block;
-		}
 	}
 
 	// .toolbar__select-sort
 
 	&__select-sort {
+
+		@media (max-width: 450px) {
+			width: 100%;
+		}
 
 		select {
 			width: 168px;
@@ -59,6 +121,10 @@
 
 			@media (max-width: 500px) {
 				width: 130px;
+			}
+
+			@media (max-width: 450px) {
+				width: 100%;
 			}
 		}
 	}

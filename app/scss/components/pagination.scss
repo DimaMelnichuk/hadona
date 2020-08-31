@@ -1,5 +1,13 @@
 .pagination {
+	margin: 0px 0px 0px -100px;
 
+	@media (max-width: 1200px) {
+		margin: 0px 0px 0px -70px;
+	}
+
+	@media (max-width: 768px) {
+		margin: 0px 0px 20px 0px;
+	}
 	// .pagination__list
 
 	&__list {
@@ -10,14 +18,18 @@
 
 	&__item {
 		margin: 0px 10px 0px 0px;
+
+		&:last-child {
+			margin: 0;
+		}
 	}
 
 	// .pagination__link
 
 	&__link {
-		display: inline-block;
-		text-align: center;
-		line-height: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		width: 30px;
 		height: 30px;
 		border-radius: 5px;

@@ -23,6 +23,7 @@
 		margin: -15px;
 		display: flex;
 		height: auto;
+		width: 100%;
 
 		@media (max-width: 1300px) {
 			margin: -10px;
@@ -40,4 +41,51 @@
 		}	
 	}
 
+}
+
+.featured-tabs {
+	max-width: 100%;
+	width: 100%;
+
+	&__title {
+		display: flex;
+	}
+
+	&__title-item {
+		color: #888888;
+		background: transparent;
+		font-size: 20px;
+		font-weight: 600;
+		text-transform: uppercase;
+		transition: color .3s;
+
+		&:not(:last-child) {
+			margin: 0px 70px 0px 0px;
+
+			@media (max-width: 1400px) {
+				margin: 0px 30px 0px 0px;
+			}
+	
+			@media (max-width: 550px) {
+				margin: 0px 0px 15px 0px;
+			}
+		}
+
+		&:hover  {
+			color: #333333;
+		}
+	}
+
+	&__title-item--active {
+		color: #333333;
+	}
+
+	&__content-item {
+		padding: 10px;
+		display: none;
+	}
+
+	&__content-item--active {
+		display: flex;
+	}
 }
