@@ -43,39 +43,30 @@
 		left: 0;
 		right: 0;
 		width: 100%;
-	  	transition: background 500ms ease;
-		
-	  &:hover {
-		  .sidebar-nav__link--light {
-				color: #e12121;
-				transform: translateX(10px);
-		  }
+		transition: background 500ms ease;
+	}
 
-		  .sidebar-nav__link--dark {
-				color: #fff;
-				transform: translateX(10px);
-		  }
+	&__item-dropdown {
 
-		  .sidebar-nav__icon {
-
-				@media (max-width: 1000px) {
-					transform: rotate(270deg) translateX(-50%);
+		&.active {
+			@media (max-width: 1000px) {
+				.sidebar-nav__dropdown {
+					display: block;
 				}
-		  }
-
-	  }
-
-	  	&--dark {
-			&:hover {
-				background: #e12121;
+				.sidebar-nav__link--light {
+					color: #e12121;
+					background: #fff;
+				}
+				.sidebar-nav__link--dark {
+					color: #fff;
+					background: #e12121;
+				}
+				.sidebar-nav__link-icon:after {
+					content: "\f106";
+				}
 			}
 		}
-		  
-	  	&--light {
-			&:hover {
-				background: #fff;
-			}
-  		}
+
 	}
 
 	// .sidebar-nav__link
@@ -86,31 +77,53 @@
 		padding: 12px 20px;
 		font-weight: 400;
 		font-size: 13px;
-		transition: color .3s ease, transform .3s ease;
+		transition: background .3s, color .3s ease, transform .3s ease;
 
 		@media (max-width: 1400px) {
 			padding: 10px 20px;
 		}
 
-		&--light {
-			color: #ffffff;
-		}
-
 		&--dark {
 			color: #333333;
+
+			&:hover {
+				@media (min-width: 1000px) {
+					background: #e12121;
+					color: #fff;
+				}
+			}
 		}
+		  
+	  	&--light {
+			color: #ffffff;
+
+			&:hover {
+				@media (min-width: 1000px) {
+					background: #fff;
+					color: #e12121;
+				}
+			}
+  		}
+
 	}
 
-	&__icon {
-		position: absolute;
-		right: 20px;
-		top: 50%;
-		transform: translateY(-50%);
-		transition: transform .3s ease;
+	&__link-icon {
+		position: relative;
 
-		@media (max-width: 1000px) {
-			transform: rotate(90deg) translateX(-50%);
+		&::after {
+			content: "\f105";
+			font-family: "fontello";
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+			transition: transform .3s ease;
+	
+			@media (max-width: 1000px) {
+				content: "\f107";
+			}
 		}
+
 	}
 
 	&__dropdown {
@@ -184,7 +197,10 @@
 	}
 
 	&__item:hover .sidebar-nav__dropdown{
-		display: block;
+
+		@media (min-width: 1000px) {
+			display: block;
+		}
 	}
 
 	&__dropdown-title {
@@ -210,7 +226,7 @@
 
 		&:hover {
 			color: #e12121;
-			transform: translateX(10px);
+			text-decoration: underline;
 		}
 	}
 

@@ -340,13 +340,21 @@ $(function(){
 	});
 
 
-	/***************** Mobile-menu ********************/
-	$(".menu__link-dropdown").click(function(event){
-		if($(".menu__link-dropdown").hasClass("active")){
-			$(".menu__link-dropdown").not($(this)).removeClass("active");
-			$(".menu__dropdown").not($(this).next()).slideUp(300);
+	/***************** Mobile-menu-sidebar ********************/
+	$(".sidebar-nav__item-dropdown").click(function(e){
+		e.preventDefault();
+		if($(".sidebar-nav__item-dropdown").hasClass("active")){
+			$(".sidebar-nav__item-dropdown").not($(this)).removeClass("active");
 		}
-		$(this).toggleClass("active").next().slideToggle(300);
+		$(this).toggleClass("active");
+	});
+
+	/***************** Mobile-menu ********************/
+	$(".menu__item-dropdown").click(function(event){
+		if($(".menu__item-dropdown").hasClass("active")){
+			$(".menu__item-dropdown").not($(this)).removeClass("active");
+		}
+		$(this).toggleClass("active");
 	});
 
 /***************** special-product ********************/

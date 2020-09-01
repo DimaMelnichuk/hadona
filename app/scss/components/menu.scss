@@ -287,17 +287,18 @@
 	&__item-dropdown {
 
 		@media (max-width: 1060px) {
-			display: none;
-		}
-	}
-
-	&__link-dropdown {
-
-		@media (max-width: 1060px) {
 			width: 100%;
+
+			&:first-child {
+				display: none;
+			}
 		
 			&.active {
 				color: #e12121;
+
+				.menu__dropdown {
+					display: block;
+				}
 			}
 		}
 
@@ -314,11 +315,11 @@
 		}
 	}
 
-	&__item:hover .menu__dropdown{
-		display: block;
-
-		@media (max-width: 1060px) {
-			display: none;
+	&__item {
+		@media (min-width: 1060px) {
+			&:hover .menu__dropdown{
+				display: block;
+			}
 		}
 	}
 
