@@ -1,7 +1,7 @@
 .setting {
 	position: absolute;
 	top: 59px;
-	left: -140px;
+	left: -134px;
 	width: 460px;
 	border-top: 1px solid #e12121;
 	opacity: 0;
@@ -10,6 +10,18 @@
 
  	visibility: hidden;
 	transition: opacity .3s, visibility .3s;
+
+	@media (max-width: 1265px) {
+		left: -152px;
+	}
+
+	@media (max-width: 1150px) {
+		left: -175px;
+	}
+
+	@media (max-width: 1000px) {
+		left: -124px;
+	}
 
 	@media (max-width: 600px) {
 		position: fixed;

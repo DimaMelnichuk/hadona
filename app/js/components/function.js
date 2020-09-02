@@ -339,6 +339,16 @@ $(function(){
 		$(this).toggleClass("active");
 	});
 
+	/***************** checkmark ********************/
+/* 	$('.checkmark').on('click', function(event) {
+		if($(this).hasClass('active')){
+			$(this).find('input').prop('checked',false);
+		}else{
+			$(this).find('input').prop('checked',true);
+		}
+		$(this).toggleClass('active');
+		return false;
+	}); */
 
 	/***************** Mobile-menu-sidebar ********************/
 	$(".sidebar-nav__item-dropdown").click(function(e){
@@ -350,7 +360,8 @@ $(function(){
 	});
 
 	/***************** Mobile-menu ********************/
-	$(".menu__item-dropdown").click(function(event){
+	$(".menu__item-dropdown").click(function(e){
+		e.preventDefault();
 		if($(".menu__item-dropdown").hasClass("active")){
 			$(".menu__item-dropdown").not($(this)).removeClass("active");
 		}
@@ -363,17 +374,6 @@ $(function(){
 	$(this).addClass("active");
 	$("body").css("background",$(this).attr("data-color"));
 	$(".special-product__image").css("background-image",$(this).attr("data-pic"));
-	});
-
-	/***************** checkmark ********************/
-	$('.checkmark').on('click', function(event) {
-		if($(this).hasClass('active')){
-			$(this).find('input').prop('checked',false);
-		}else{
-			$(this).find('input').prop('checked',true);
-		}
-		$(this).toggleClass('active');
-		return false;
 	});
 
 	/***************** Сounter ********************/

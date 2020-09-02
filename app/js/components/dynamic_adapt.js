@@ -9,7 +9,7 @@ window.addEventListener('resize', move);
 //Функция
 function move(){
 	const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-	if (viewport_width <= 1060) {
+	if (viewport_width <= 991.98) {
 		if (!item.classList.contains('done')) {
 			parent.insertBefore(item, parent.children[1]);
 			item.classList.add('done');

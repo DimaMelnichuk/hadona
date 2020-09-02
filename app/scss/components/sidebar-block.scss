@@ -2,14 +2,26 @@
 
 	// .sidebar-block__img
 
-	&__img img {
-		height: 405px;
-		width: 100%;
-		object-position: center;
-		object-fit: cover;
+	&__img {
+		padding: 0px 0px 154.4% 0px;
+		overflow: hidden;
+		position: relative;
 
-		@media (max-width: 1400px) {
-			height: 350px;
+		@media (max-width: 1000px) {
+			padding: 0px 0px 25% 0px;
+		}
+
+		@media (max-width: 560px) {
+			padding: 0px 0px 60% 0px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
 		}
 	}
 }

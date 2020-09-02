@@ -154,17 +154,22 @@
 		&--img {
 			padding: 30px 30px 240px 30px;
 
-			@media (max-width: 800px) {
-				padding: 15px 15px 190px 15px;
+			@media (max-width: 1000px) {
+				padding: 30px;
 			}
 
-			@media (max-width: 560px) {
-				padding: 30px 30px 240px 30px;
+			@media (max-width: 800px) {
+				padding: 15px;
 			}
 		}
 	}
 
 	&__dropdown-img {
+		display: block;
+
+		@media (max-width: 1000px) {
+			display: none;
+		}
 
 		img {
 			position: absolute;

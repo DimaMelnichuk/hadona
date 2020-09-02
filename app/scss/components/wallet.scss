@@ -15,6 +15,10 @@
  	visibility: hidden;
 	transition: opacity .3s, visibility .3s;
 
+	@media (max-width: 1000px) {
+		right: -50px;
+	}
+
 	@media (max-width: 600px) {
 		right: 0;
 		position: fixed;

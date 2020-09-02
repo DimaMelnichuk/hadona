@@ -2,7 +2,7 @@
 	display: flex;
 	flex: 1 1 auto;
 	
-	@media (max-width: 1060px) {
+	@media (max-width: 991.98px) {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -37,9 +37,7 @@
 		position: relative;
 		z-index: 3;
 
-		@media (max-width: 1060px) {
-	/* 		flex-direction: column;
-			flex-basis: 100%; */
+		@media (max-width: 991.98px) {
 			display: block;
 			width: 100%;
 		}
@@ -51,7 +49,7 @@
 		display: flex;
 		position: relative;
 
-		@media (max-width: 1060px) {
+		@media (max-width: 991.98px) {
 			flex-direction: column;
 		}
 
@@ -65,7 +63,7 @@
 			width: 1px;
 			left: 0;
 
-			@media (max-width: 1060px) {
+			@media (max-width: 991.98px) {
 				display: none;
 			}
 		}
@@ -80,7 +78,7 @@
 			width: 1px;
 			right: 0;
 
-			@media (max-width: 1060px) {
+			@media (max-width: 991.98px) {
 				display: none;
 			}
 		}
@@ -117,14 +115,14 @@
 			font-size: 14px;
 		}
 
-		@media (max-width: 1060px) {
+		@media (max-width: 991.98px) {
 			color: #fff;
 			padding: 16px 10px;
 			width: 100%;
 			font-size: 22px;
 		}
 
-		@media (max-width: 1000px) {
+		@media (max-width: 991.98px) {
 			font-size: 22px;
 		}
 
@@ -151,12 +149,12 @@
 			right: 0;
 			top: 0;
 
-			@media (max-width: 1060px) {
+			@media (max-width: 991.98px) {
 				display: none;
 			}
 		}
 
-		@media (max-width: 1060px) {
+		@media (max-width: 991.98px) {
 			color: #888888;
 		}
 		
@@ -242,13 +240,12 @@
 
 	&__submenu-link {
 		font-weight: 400;
-		transition: color .3s ease, transform .3s ease;
+		transition: color .3s ease;
 
 		&:hover {
 			color: #e12121;
-			transform: translateX(10px);
 
-			@media (max-width: 1060px) {
+			@media (max-width: 991.98px) {
 				color: #fff;
 			}
 		}
@@ -278,7 +275,7 @@
 		background: #000;
 		border-top: 1px solid #e12121;
 
-		@media (max-width: 1060px) {
+		@media (max-width: 991.98px) {
 			width: 100%;
 			position: relative;
 		}
@@ -286,7 +283,7 @@
 
 	&__item-dropdown {
 
-		@media (max-width: 1060px) {
+		@media (max-width: 991.98px) {
 			width: 100%;
 
 			&:first-child {
@@ -312,11 +309,15 @@
 		 
 		&:hover {
 			background: #e12121;
+
+			.menu__dropdown-link {
+				color: #fff;
+			}
 		}
 	}
 
 	&__item {
-		@media (min-width: 1060px) {
+		@media (min-width: 991.98px) {
 			&:hover .menu__dropdown{
 				display: block;
 			}
@@ -325,18 +326,10 @@
 
 	&__dropdown-link {
 		text-transform: capitalize;
+		width: 100%;
 		padding: 15px 30px;
 		font-weight: 400;
 		transition: color .3s ease, transform .3s ease;
-
-		@media (max-width: 1060px) {
-			width: 100%;
-		}
-
-		&:hover {
-			color: #fff;
-			transform: translateX(10px);
-		}
 	}
 
 	// .menu__burger
@@ -344,7 +337,7 @@
 	&__burger {
 		display: none;
 
-		@media (max-width: 1060px) {
+		@media (max-width: 991.98px) {
 			display: block;
 			position: absolute;
 			width: 30px;
