@@ -22,6 +22,7 @@
 
 		@media (max-width: 480px) {
 			margin: 0px 0px 20px 0px;
+			padding: 0px 0px 60% 0px;
 		}
 
 		img {
@@ -38,7 +39,7 @@
 
 	&__title {
 		color: #333333;
-		@include adaptive-font(30,22);
+		@include adaptive-font(30,20);
 		font-weight: 800;
 		margin: 0px 0px 30px 0px;
 
@@ -114,10 +115,13 @@
 	&__descr-text {
 		color: #888888;
 		line-height: 25px;
+		font-size: 16px;
 		margin: 0px 0px 25px 0px;
 
 		@media (max-width: 480px) {
 			margin: 0px 0px 20px 0px;
+			font-size: 14px;
+			line-height: 22px;
 		}
 	}
 
@@ -127,12 +131,15 @@
 		display: block;
 		font-weight: 800;
 		line-height: 25px;
+		font-size: 16px;
 		border-left: 3px solid #e12121;
 		padding: 0px 0px 0px 15px;
 		margin: 0px 0px 30px 0px;
 
 		@media (max-width: 480px) {
 			margin: 0px 0px 20px 0px;
+			line-height: 22px;
+			font-size: 14px;
 		}
 	}
 
@@ -153,6 +160,7 @@
 
 		@media (max-width: 480px) {
 			margin: 0px 0px 20px 0px;
+			line-height: 22px;
 		}
 
 		span {
@@ -168,6 +176,7 @@
 			}
 
 			@media (max-width: 480px) {
+				padding: 15px;
 				
 				&:first-child {
 					margin: 0 0 20px 0;

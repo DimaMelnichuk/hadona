@@ -246,3 +246,18 @@
 		border: 2px solid #e12020;
 	}
 }
+
+/* ==========================================================================
+  tabs-slider
+========================================================================== */
+.tabs__slider .slick-prev {
+	left: 10px;
+}
+
+.tabs__slider .slick-next {
+	right: 10px;
+}
+
+.tabs__slider .slick-list {
+	padding-bottom: 5px;
+}

@@ -5,6 +5,10 @@
 		display: flex;
 		margin: 0px 0px 15px 0px;
 
+		&:last-child {
+			margin: 0;
+		}
+
 		&:hover .sidebar-post__item-title {
 			color: #e12121;
 		}
