@@ -12,9 +12,10 @@
 
 	&__row {
 		display: flex;
+		flex-flow: row wrap;
 		margin: 0px -15px 0px -15px;
 		
-		@media (max-width: 768px) {
+		@media (max-width: 991.98px) {
 			flex-direction: column-reverse;
 		}
 	}
@@ -24,6 +25,11 @@
 	&__column {
 		flex: 0 1 50%;
 		padding: 0px 15px 0px 15px;
+
+		
+		@media (max-width: 991.98px) {
+			flex: 0 1 100%;
+		}
 	}
 
 	// .contact__title

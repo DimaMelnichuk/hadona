@@ -133,8 +133,20 @@
 	height: 100%;
 }
 
+.featured__slider  .slick-list {
+	margin: -15px;
+
+	@media (max-width: 1300px) {
+		margin: -10px;
+	}
+}
+
 .featured__slider .slick-slide {
 	display: flex;
+
+	@media (max-width: 500px) {
+		display: block;
+	}
 }
 
 .featured__slider .slick-prev {
@@ -260,4 +272,10 @@
 
 .tabs__slider .slick-list {
 	padding-bottom: 5px;
+}
+
+.tabs__slider .slick-slide,
+.tabs__slider .slick-track {
+	display: flex;
+	height: auto;
 }

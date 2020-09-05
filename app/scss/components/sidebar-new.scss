@@ -31,12 +31,10 @@
 		background: #fff;
 
 		@media (max-width: 1500px) {
-			margin: 0px 5px 0px 0px;
 			padding: 5px;
 		}
 
 		@media (max-width: 768px) {
-			margin: 0px 10px 0px 0px;
 			padding: 10px;
 		}
 
@@ -58,9 +56,17 @@
 		}
 	}
 
+	// .sidebar-new__item-body
+
+	&__item-body {
+		display: inline-block;
+	}
+
+
 	// .sidebar-new__item-title
 
 	&__item-title {
+		display: inline-block;
 		color: #888888;
 		line-height: 22px;
 		font-weight: 400;
@@ -76,26 +82,39 @@
 			line-height: 22px;
 			font-size: 16px;
 		}
+	}
+
+	// .sidebar-new__item-price
+
+	&__item-price {
+		display: inline-block;
+		color: #7ED250;
+		font-weight: 400;
+		position: relative;
+		font-size: 14px;
+		padding: 0px 0px 0px 5px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			height: 13px;
+			width: 1px;
+			background: #888888;
+			left: 0;
+			top: 3px;
+			transition: background .3s;
+		}
 
 		span {
-			position: relative;
 			color: #e12020;
-			text-transform: uppercase;
-			font-weight: 600;
-			margin: 0px 7px 0px 0px;
-			padding: 0px 0px 0px 14px;
+		}
+	}
 
-			&::before {
-				content: "";
-				position: absolute;
-				height: 13px;
-				width: 1px;
-				margin: 0px 0px 0px 7px;
-				background: #888888;
-				left: 0;
-				top: 3px;
-				transition: background .3s;
-			}
+	&__item-price--old {
+		span {
+			text-decoration: line-through;
+			font-weight: 400;
+			margin: 0px 0px 0px 6px;
 		}
 	}
 }

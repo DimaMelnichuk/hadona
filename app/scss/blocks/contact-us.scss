@@ -1,7 +1,7 @@
 .contact-us {
 	padding: 40px 0px;
 
-	@media (max-width: 768px) {
+	@media (max-width: 991.98px) {
 		padding: 30px 0px;
 	}
 
@@ -12,11 +12,8 @@
 
 	&__row {
 		display: flex;
+		flex-flow: row wrap;
 		margin: 0px -15px 0px -15px;
-		
-		@media (max-width: 768px) {
-			flex-direction: column;
-		}
 	}
 
 	// .contact-us__column
@@ -24,6 +21,10 @@
 	&__column {
 		flex: 0 1 50%;
 		padding: 0px 15px 0px 15px;
+
+		@media (max-width: 991.98px) {
+			flex: 0 1 100%;
+		}
 	}
 
 	// .contact-us__contact-title
@@ -35,7 +36,7 @@
 		line-height: 42px;
 		margin: 0px 0px 30px 0px;
 
-		@media (max-width: 768px) {
+		@media (max-width: 991.98px) {
 			margin: 0 0 20px 0;
 		}
 	}
@@ -49,7 +50,7 @@
 		line-height: 22px;
 		margin: 0px 0px 45px 0px;
 
-		@media (max-width: 768px) {
+		@media (max-width: 991.98px) {
 			margin: 0 0 30px 0;
 		}
 
@@ -108,7 +109,7 @@
 			margin: -10px 0px -10px 0px;
 		}
 
-		@media (max-width: 768px) {
+		@media (max-width: 991.98px) {
 			flex-direction: row;
 			margin: 0px -10px 0px -10px;
 		}
@@ -138,7 +139,7 @@
 			padding: 10px 0px 10px 0px;
 		}
 
-		@media (max-width: 768px) {
+		@media (max-width: 991.98px) {
 			padding: 0px 10px 0px 10px;
 		}
 
@@ -154,11 +155,6 @@
 		width: 35px;
 		height: 40px;
 		text-align: center;
-	}
-
-	// .contact-us__offices-body
-
-	&__offices-body {
 	}
 
 	// .contact-us__offices-name
@@ -226,7 +222,7 @@
 	&__map {
 		margin: 0px 0px 50px 0px;
 
-		@media (max-width: 768px) {
+		@media (max-width: 991.98px) {
 			margin: 0px 0px 30px 0px;
 		}
 
@@ -298,7 +294,7 @@
 			flex: 0 1 100%;
 		}
 
-		@media (max-width: 768px) {
+		@media (max-width: 991.98px) {
 			flex: 0 1 49%;
 		}
 

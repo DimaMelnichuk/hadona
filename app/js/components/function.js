@@ -9,11 +9,9 @@ $(function(){
 				breakpoint: 769,
 				settings: {
 				arrows: false,
-				autoplay: true,
-  				autoplaySpeed: 2000,
 				}
 			}
-			]
+		]
 	});
 
 	/***************** featured__slider big ********************/
@@ -46,8 +44,6 @@ $(function(){
 				settings: {
 					slidesToShow: 3,
 					arrows: false,
-					autoplay: true,
-					autoplaySpeed: 2000,
 				}
 			},
 			{
@@ -55,8 +51,6 @@ $(function(){
 				settings: {
 					slidesToShow: 2,
 					arrows: false,
-					autoplay: true,
-					autoplaySpeed: 2000,
 				}
 			},
 			{
@@ -64,8 +58,6 @@ $(function(){
 				settings: {
 					slidesToShow: 1,
 					arrows: false,
-					autoplay: true,
-					autoplaySpeed: 2000,
 				}
 			},
 			]
@@ -79,54 +71,41 @@ $(function(){
 		swipeToSlide: true,
 		responsive: [
 			{
-				breakpoint: 1300,
+				breakpoint: 1301,
 				settings: {
 					slidesToShow: 4,
 				}
 			},
 			{
-				breakpoint: 1165,
+				breakpoint: 1101,
 				settings: {
 					slidesToShow: 3,
 				}
 			},
 			{
-				breakpoint: 1000,
+				breakpoint: 992,
 				settings: {
 					slidesToShow: 4,
 				}
 			},
 			{
-				breakpoint: 900,
+				breakpoint: 851,
 				settings: {
 					slidesToShow: 3,
 				}
 			},
 			{
-				breakpoint: 769,
-				settings: {
-					slidesToShow: 3,
-					arrows: false,
-					autoplay: true,
-					autoplaySpeed: 2000,
-				}
-			},
-			{
-				breakpoint: 700,
+				breakpoint: 651,
 				settings: {
 					slidesToShow: 2,
 					arrows: false,
-					autoplay: true,
-					autoplaySpeed: 2000,
 				}
 			},
 			{
-				breakpoint: 500,
+				breakpoint: 431,
 				settings: {
 					slidesToShow: 1,
 					arrows: false,
-					autoplay: true,
-					autoplaySpeed: 2000,
 				}
 			},
 			]
@@ -501,33 +480,41 @@ $('.tabs__title-item').click(function(e){
 });
 
 
+$('.featured-tabs__title-item').click(function(e){
+	e.preventDefault();
 
+	$('.featured-tabs__title-item').removeClass('featured-tabs__title-item--active');
+	$('.featured-tabs__content-item').removeClass('featured-tabs__content-item--active');
 	
+	$(this).addClass('featured-tabs__content-item--active');
+	$(this).addClass('featured-tabs__title-item--active');
+	$($(this).attr('href')).addClass('featured-tabs__content-item--active');
+});
+	
+/***************** Accordion ********************/
+$(".accordion__item-title").click(function(event){
+	if($(".accordion__item-title").hasClass("accordion__item-title--active")){
+		$(".accordion__item-title").not($(this)).removeClass("accordion__item-title--active");
+		$(".accordion__item-info").not($(this).next()).slideUp(300);
+	}
+	$(this).toggleClass("accordion__item-title--active").next().slideToggle(300);
+});
 
 
 });
 
 
+/***************** rating-star********************/
+const ratingItemList = document.querySelectorAll(".cart__rating-item");
+const ratingItemArray = Array.prototype.slice.call(ratingItemList);
 
-
-/***************** featured-tabs ********************/
-document.querySelectorAll('.featured-popular-product__title-item').forEach((item) =>
-	item.addEventListener('click', function (e) {
-		e.preventDefault();
-		const id = e.target.getAttribute('href').replace('#', '');
-
-		document.querySelectorAll('.featured-popular-product__title-item').forEach(
-			(child) => child.classList.remove('featured-popular-product__title-item--active')
-		);
-		document.querySelectorAll('.featured-popular-product__content-item').forEach(
-			(child) => child.classList.remove('featured-popular-product__content-item--active')
-		);
-
-		item.classList.add('featured-popular-product__title-item--active');
-		document.getElementById(id).classList.add('featured-popular-product__content-item--active');
+ratingItemArray.forEach(item => 
+	item.addEventListener('click', () => {
+		const { itemValue } = item.dataset;
+		item.parentNode.dataset.totalValue = itemValue;
 	})
+	
 );
-
 
 /***************** Menu-wallet ********************/
 let wallet_icon = document.querySelector('.basket__wallet-icon');
@@ -648,7 +635,7 @@ function ibg(){
 ibg();
 
 
-
+/***************** price-filter ********************/
 const filterPrice = document.querySelector('.price-filter__slider');
 
 noUiSlider.create(filterPrice, {
@@ -684,3 +671,50 @@ var snapValues = [
 filterPrice.noUiSlider.on('update', function (values, handle) {
 	snapValues[handle].value = values[handle];
 });
+
+function getTimeRemaining(endtime) {
+	var t = Date.parse(endtime) - Date.parse(new Date());
+	var seconds = Math.floor((t / 1000) % 60);
+	var minutes = Math.floor((t / 1000 / 60) % 60);
+	var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+	var days = Math.floor(t / (1000 * 60 * 60 * 24));
+	return {
+	  'total': t,
+	  'days': days,
+	  'hours': hours,
+	  'minutes': minutes,
+	  'seconds': seconds
+	};
+ }
+
+
+
+/***************** timer ********************/
+ function initializeClock(id, endtime) {
+	var clock = document.getElementById(id);
+	var daysSpan = clock.querySelector('.days');
+	var hoursSpan = clock.querySelector('.hours');
+	var minutesSpan = clock.querySelector('.minutes');
+	var secondsSpan = clock.querySelector('.seconds');
+  
+	function updateClock() {
+	  var t = getTimeRemaining(endtime);
+  
+	  daysSpan.innerHTML = t.days;
+	  hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+	  minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+	  secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+  
+	  if (t.total <= 0) {
+		 clearInterval(timeinterval);
+	  }
+	}
+  
+	updateClock();
+	var timeinterval = setInterval(updateClock, 1000);
+ }
+  
+ var deadline = new Date(Date.parse(new Date()) + 1 * 1 * 1 * 60 * 1000); // for endless timer
+ initializeClock('countdown', deadline);
+ var deadline_1 = new Date(Date.parse(new Date()) + 30 * 24 * 60 * 60 * 1000); // for endless timer
+ initializeClock('countdown_1', deadline_1);

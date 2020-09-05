@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	@@include('blocks/_head.html',{
-		"title":"Home"
+		"title":"Hadona"
 	})
 <body>
 
@@ -14,7 +14,7 @@
 					<div class="main-slider__item">
 						<div class="main-slider__image">
 							<a href="detail.html">
-								<img src="img/main-slider/01.jpg" alt="#">
+								<img src="img/main-slider/04.jpg" alt="#">
 							</a>
 						</div>
 					</div>
@@ -34,7 +34,11 @@
 						<div class="information__column--sm">
 							<div class="information__block-item information__block-item--high">
 								<a href="detail.html">
-									<img class="img" src="img/information/01.jpg" alt="">
+									<picture>
+										<source srcset="img/information/2222.jpg, img/information/2222.webp" type="image/jpg" media="(max-width: 768px)">
+										<source srcset="img/information/01.png, img/information/01.webp" type="image/jpg">
+										<img class="img" src="img/information/01.png" alt="#">
+									</picture>
 								</a>
 							</div>
 						</div>

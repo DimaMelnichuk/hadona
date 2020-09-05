@@ -37,7 +37,7 @@ function getTimeRemaining(endtime) {
 	var timeinterval = setInterval(updateClock, 1000);
  }
   
- var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
+ var deadline = new Date(Date.parse(new Date()) + 1 * 1 * 1 * 60 * 1000); // for endless timer
  initializeClock('countdown', deadline);
  var deadline_1 = new Date(Date.parse(new Date()) + 30 * 24 * 60 * 60 * 1000); // for endless timer
  initializeClock('countdown_1', deadline_1);
