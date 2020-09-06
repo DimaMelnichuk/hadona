@@ -198,12 +198,10 @@
 
 	&__image {
 		margin: 0px 0px 15px 0px;
-		background: url("../img/special-product/red.webp");
+		background-image: url("../img/special-product/red.png");
 		background-size: contain;
 		background-position: center;
 		background-repeat: no-repeat;
-		object-position: center;
-		object-fit: contain;
 		min-height: 300px;
 		min-width: 300px;
 		height: 100%;

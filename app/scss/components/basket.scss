@@ -25,11 +25,14 @@
 		}
 
 		&:hover .basket__setting-icon{
-			i,
-			span {
-				color: #e12121;
+
+			@media (min-width: 991.98px) {
+				i,
+				span {
+					color: #e12121;
+				}
 			}
-			
+
 		}
 
 	}
@@ -119,7 +122,9 @@
 		}
 
 		&:hover i{
-			color: #e12121;
+			@media (min-width: 991.98px) {
+				color: #e12121;
+			}
 		}
 
 		&.active {
