@@ -2878,10 +2878,6 @@
   display: flex;
 }
 
-.menu__item-search a:hover {
-  color: #e12121;
-}
-
 .menu__link {
   position: relative;
   color: #888888;
@@ -6753,6 +6749,10 @@ body.lock {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
+  }
+
+  .menu__item-search a:hover {
+    color: #e12121;
   }
 
   .menu__item:hover .menu__dropdown {
