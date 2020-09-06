@@ -58,7 +58,9 @@
 		transition: color .3s;
 
 		&:hover {
-			color: #e12121;
+			@media (min-width: 991.98px) {
+				color: #e12121;
+			}
 		}
 	}
 }

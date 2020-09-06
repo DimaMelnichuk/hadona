@@ -99,8 +99,10 @@
 		display: flex;
 
 		a {
-			&:hover {
-				color: #e12121;
+			@media (min-width: 991.98px) {
+				&:hover {
+					color: #e12121;
+				}
 			}
 		}
 	}
